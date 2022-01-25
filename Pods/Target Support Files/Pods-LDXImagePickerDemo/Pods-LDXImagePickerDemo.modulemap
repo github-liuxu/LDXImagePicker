@@ -1,0 +1,6 @@
+framework module Pods_LDXImagePickerDemo {
+  umbrella header "Pods-LDXImagePickerDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
