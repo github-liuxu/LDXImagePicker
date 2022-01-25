@@ -9,31 +9,30 @@
 /* Begin PBXAggregateTarget section */
 		C1F70AD67217A9D7EAA196E18E140DF6 /* LDXImagePicker */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 59010157239C585B9E13D6DC7C69F1D8 /* Build configuration list for PBXAggregateTarget "LDXImagePicker" */;
+			buildConfigurationList = 98AB698C8B8D44C5A1C2F0807F91BC8F /* Build configuration list for PBXAggregateTarget "LDXImagePicker" */;
 			buildPhases = (
 			);
 			dependencies = (
-				4FD48DDF644CEE554487C3949DC6B935 /* PBXTargetDependency */,
-				14D0AED4A447FCB9AE8E8DD8F1B9B3DD /* PBXTargetDependency */,
+				72E9589476BDFDAF4FDDE0D838D0F3CE /* PBXTargetDependency */,
 			);
 			name = LDXImagePicker;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		08DDCAF000F3A457DF49DF027A78555F /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECF19F2C17178E7145FE1DBF7DE5B7D /* MBProgressHUD-dummy.m */; };
-		0D47B0D159602F6333AD1A2BA706F84C /* Pods-LDXImagePickerDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E03B6DBE93D294338ACAB2317EAA4E /* Pods-LDXImagePickerDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1A3E6559980B30A457F4652D4FDBBA5D /* Pods-LDXImagePicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9E25FED336C13C778DF1E93BD62EFA /* Pods-LDXImagePicker-dummy.m */; };
-		33E4AD4B67BDECEECD46E158692C88AE /* Pods-LDXImagePicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A6562B11B8891663336B9D6881E31C1E /* Pods-LDXImagePicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D47B0D159602F6333AD1A2BA706F84C /* Pods-LDXImagePickerDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 975D9D8F1D7F3DAEAE0BBBC683232C27 /* Pods-LDXImagePickerDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A3E6559980B30A457F4652D4FDBBA5D /* Pods-LDXImagePicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCBCF0942EC3F5F6499ADCFC815AC96 /* Pods-LDXImagePicker-dummy.m */; };
+		2DFB4FC239DBFF165A2AA7FA51490E37 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51AB40693B18F443F75126966ED13E47 /* QuartzCore.framework */; };
+		33E4AD4B67BDECEECD46E158692C88AE /* Pods-LDXImagePicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A9BBCA38D20C0814225464E78990CB2 /* Pods-LDXImagePicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BE1C359000FFF0720ED527134D27888 /* MBProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F31C808188F0318B8D5A16F065156F9 /* MBProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4478EBFDC0FD002E3F5C854963F3CC4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB342FF58CA5A5D1282C84E02280A34F /* Foundation.framework */; };
-		564771EE4B5C056FB3F48725C897E71A /* Pods-LDXImagePickerDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 98A5D3AA5D4A6E098F02D2A5EFC21409 /* Pods-LDXImagePickerDemo-dummy.m */; };
-		786B41141403B6D3774997134E884FAC /* MBProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F31C808188F0318B8D5A16F065156F9 /* MBProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		819C90109122B27D5C6D07457C8E4AD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB342FF58CA5A5D1282C84E02280A34F /* Foundation.framework */; };
+		5205EDA90BF086A5A2AB6ECE8004D1FF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C8787AEF5F8F4CCDD782A64D078427 /* MBProgressHUD.m */; };
+		564771EE4B5C056FB3F48725C897E71A /* Pods-LDXImagePickerDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8B8A3B1AF959BABAA50A1DFC953FCA /* Pods-LDXImagePickerDemo-dummy.m */; };
+		5D2E43E97AB401BECFCB5CD8E7276F31 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = FC7C54894F0D982511B53767CE31EBF1 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E275994E71F7B29DC6432D4994B6E64 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECF19F2C17178E7145FE1DBF7DE5B7D /* MBProgressHUD-dummy.m */; };
+		6F9F31B2F174838C9A9793BFA011E6D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABB98090B02C131F86931CB9BE54B7A /* CoreGraphics.framework */; };
 		B529FA68EF50DB902F5C46939E581E98 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB342FF58CA5A5D1282C84E02280A34F /* Foundation.framework */; };
-		D082DE32934D69E49D40E1E89879F0DC /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = FC7C54894F0D982511B53767CE31EBF1 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D250B927BBD5D30C14B68979568FCA88 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABB98090B02C131F86931CB9BE54B7A /* CoreGraphics.framework */; };
-		ED77585753A729872533A23867C43E84 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51AB40693B18F443F75126966ED13E47 /* QuartzCore.framework */; };
-		EFB4ACA3CFE7AC82C99D0CDB2407C064 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 67C8787AEF5F8F4CCDD782A64D078427 /* MBProgressHUD.m */; };
+		CBD776FF13C891C9EBCCB7063382FDAB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB342FF58CA5A5D1282C84E02280A34F /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,28 +50,21 @@
 			remoteGlobalIDString = C1F70AD67217A9D7EAA196E18E140DF6;
 			remoteInfo = LDXImagePicker;
 		};
-		346D26070BE6916F127E3F80BC19968D /* PBXContainerItemProxy */ = {
+		AB925A83FAD2D4BF18BAA9C69E279217 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 82B0A41D3031FF27D78E17B0A9A46FB0;
 			remoteInfo = MBProgressHUD;
 		};
-		C86B64AC44FB2A1EF02B62D4591F1F73 /* PBXContainerItemProxy */ = {
+		DF855B11953EFDBC42646BF7FEF46EDA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 82B0A41D3031FF27D78E17B0A9A46FB0;
 			remoteInfo = MBProgressHUD;
 		};
-		D79ADC24B2D6C553B71CC80B8E9466B7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0660701BD8C556625B3F944A4D0232C3;
-			remoteInfo = "LDXImagePicker-LDXImagePicker";
-		};
-		E9ECA589E7DA5FEA2ABA45854FCCDCA4 /* PBXContainerItemProxy */ = {
+		E4C8CE2474DD592ACC2B5BE0E001E194 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -82,44 +74,40 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05ACD357830AEEC3E8EA57EAAAE61ED0 /* Pods-LDXImagePickerDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LDXImagePickerDemo-frameworks.sh"; sourceTree = "<group>"; };
-		077B7AD0F1BA1E816F6A8D85CD6C77C5 /* Pods-LDXImagePickerDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LDXImagePickerDemo.modulemap"; sourceTree = "<group>"; };
+		04C93935C190F9D1D714AFAD88C88ED4 /* Pods-LDXImagePicker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LDXImagePicker-acknowledgements.markdown"; sourceTree = "<group>"; };
+		054B073A7A5D3D9E7558823BF27A7016 /* Pods-LDXImagePicker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LDXImagePicker-acknowledgements.plist"; sourceTree = "<group>"; };
+		0F28CABE74FC591FB7C81109107CA9E7 /* Pods-LDXImagePickerDemo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LDXImagePickerDemo-Info.plist"; sourceTree = "<group>"; };
 		148386C0A420B5C6573C656D0B99A233 /* Pods-LDXImagePicker */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LDXImagePicker"; path = Pods_LDXImagePicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F06082F1F2B69C82C35A4A3AE0AD9BB /* Pods-LDXImagePickerDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LDXImagePickerDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		23B9368FE35EC159FD88F4167E250A0E /* Pods-LDXImagePicker-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LDXImagePicker-resources.sh"; sourceTree = "<group>"; };
-		2C9E25FED336C13C778DF1E93BD62EFA /* Pods-LDXImagePicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LDXImagePicker-dummy.m"; sourceTree = "<group>"; };
-		3C9E799DF891B2BFC3C815454B3D2113 /* Pods-LDXImagePickerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LDXImagePickerDemo.release.xcconfig"; sourceTree = "<group>"; };
-		4813588FBA541C8E7E00143FB7351B6B /* LDXImagePicker-LDXImagePicker */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "LDXImagePicker-LDXImagePicker"; path = LDXImagePicker.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B85B0FE0C45110B8CEF10774C5E4BE3 /* Pods-LDXImagePicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LDXImagePicker-Info.plist"; sourceTree = "<group>"; };
-		4CECFEF91F30C3C4BC256396CCE07280 /* Pods-LDXImagePickerDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LDXImagePickerDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		18C0842C2EEA6DA232B0D2B40848A939 /* LDXImagePicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LDXImagePicker.release.xcconfig; sourceTree = "<group>"; };
+		1FCBCF0942EC3F5F6499ADCFC815AC96 /* Pods-LDXImagePicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LDXImagePicker-dummy.m"; sourceTree = "<group>"; };
+		25686026D4E5C892326AC7FC2BBC0AAC /* Pods-LDXImagePicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LDXImagePicker.debug.xcconfig"; sourceTree = "<group>"; };
+		279E8A5274E1F36306F6C519F267D313 /* Pods-LDXImagePickerDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LDXImagePickerDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		4A9BBCA38D20C0814225464E78990CB2 /* Pods-LDXImagePicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LDXImagePicker-umbrella.h"; sourceTree = "<group>"; };
 		4ECF19F2C17178E7145FE1DBF7DE5B7D /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
-		50F684DEBC974701360AA56E8F9C850E /* Pods-LDXImagePicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LDXImagePicker.release.xcconfig"; sourceTree = "<group>"; };
 		51AB40693B18F443F75126966ED13E47 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		53025FD44EEDEB9CEAE854B0AE31CB82 /* MBProgressHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MBProgressHUD-Info.plist"; sourceTree = "<group>"; };
+		5521668712BA01374090BB92EBADE620 /* Pods-LDXImagePicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LDXImagePicker.release.xcconfig"; sourceTree = "<group>"; };
 		5E221A5AAC45302AF396416395265FFD /* MBProgressHUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.debug.xcconfig; sourceTree = "<group>"; };
 		5F31C808188F0318B8D5A16F065156F9 /* MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
-		6594D08C2580A7D472909FEEC44DCCF6 /* Pods-LDXImagePicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LDXImagePicker.debug.xcconfig"; sourceTree = "<group>"; };
 		67C8787AEF5F8F4CCDD782A64D078427 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		6CEB62E30C5BAB8D4A2A435A4D4DA33A /* MBProgressHUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.release.xcconfig; sourceTree = "<group>"; };
+		70A7F384C5BD8E65C270EF041BA01F77 /* Pods-LDXImagePickerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LDXImagePickerDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		71586C258C9A4BA21A453C698866EBC7 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		82FF70CDF071959033DBA681414BD7DB /* Pods-LDXImagePickerDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LDXImagePickerDemo.modulemap"; sourceTree = "<group>"; };
+		8B8B8A3B1AF959BABAA50A1DFC953FCA /* Pods-LDXImagePickerDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LDXImagePickerDemo-dummy.m"; sourceTree = "<group>"; };
 		8B8FAB0D627B17EDE1366984278705D9 /* MBProgressHUD */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBProgressHUD; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D51F4DE9DB46D717EBC164C16E51170 /* Pods-LDXImagePicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LDXImagePicker.modulemap"; sourceTree = "<group>"; };
-		917D0CE61AA4938A5A8E71F205FFBD89 /* ResourceBundle-LDXImagePicker-LDXImagePicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-LDXImagePicker-LDXImagePicker-Info.plist"; sourceTree = "<group>"; };
-		98A5D3AA5D4A6E098F02D2A5EFC21409 /* Pods-LDXImagePickerDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LDXImagePickerDemo-dummy.m"; sourceTree = "<group>"; };
+		975D9D8F1D7F3DAEAE0BBBC683232C27 /* Pods-LDXImagePickerDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LDXImagePickerDemo-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F931FE924977CFF4503587FB72252D7 /* Pods-LDXImagePicker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LDXImagePicker-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A1178CED6316E299D50CEF047E09F66F /* LDXImagePicker.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LDXImagePicker.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A6562B11B8891663336B9D6881E31C1E /* Pods-LDXImagePicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LDXImagePicker-umbrella.h"; sourceTree = "<group>"; };
-		B3E03B6DBE93D294338ACAB2317EAA4E /* Pods-LDXImagePickerDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LDXImagePickerDemo-umbrella.h"; sourceTree = "<group>"; };
-		CA7017CDB6193DA778076C3B6F991DD0 /* Pods-LDXImagePickerDemo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LDXImagePickerDemo-Info.plist"; sourceTree = "<group>"; };
+		A8120BE6BC2FB10E1F29E5F7702927F7 /* Pods-LDXImagePickerDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LDXImagePickerDemo-frameworks.sh"; sourceTree = "<group>"; };
+		BF7F0EA4B116ABEBC9B05A835AEF901F /* Pods-LDXImagePicker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LDXImagePicker-Info.plist"; sourceTree = "<group>"; };
+		C5749FB296C10AE3CB10C78FDCE1D038 /* Pods-LDXImagePickerDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LDXImagePickerDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CABB98090B02C131F86931CB9BE54B7A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		CB342FF58CA5A5D1282C84E02280A34F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D1082C74168695C3E16BB962A4BA8407 /* Pods-LDXImagePickerDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LDXImagePickerDemo-resources.sh"; sourceTree = "<group>"; };
-		DC80EF6679EC3A93FA637160A0E7E81C /* Pods-LDXImagePicker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LDXImagePicker-acknowledgements.plist"; sourceTree = "<group>"; };
-		E77D835065E77D67C9E148D3072F59CD /* LDXImagePicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LDXImagePicker.debug.xcconfig; sourceTree = "<group>"; };
-		EFFAE6E79CE68557986C76B01519DA67 /* LDXImagePicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LDXImagePicker.release.xcconfig; sourceTree = "<group>"; };
+		CEE9B6ABB5CB3C07AA627D84B228F4D4 /* Pods-LDXImagePicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LDXImagePicker.modulemap"; sourceTree = "<group>"; };
+		E5D8452FAF98EF99E8DD3DF97C2191DC /* LDXImagePicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LDXImagePicker.debug.xcconfig; sourceTree = "<group>"; };
+		E8DDF98719C9942DB893E644D876C5A3 /* LDXImagePicker.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = LDXImagePicker.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		EB6340CE587BA1BBBD3B370BA327C0FF /* Pods-LDXImagePickerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LDXImagePickerDemo.release.xcconfig"; sourceTree = "<group>"; };
 		F1A0E508679ED342B4AEDF1866C001EB /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
-		F65730C5CA2152F04AE97302A58CCDAC /* Pods-LDXImagePickerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LDXImagePickerDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		FC7C54894F0D982511B53767CE31EBF1 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		FD7FC2731A1682BF1578C33B7AE2A3B7 /* Pods-LDXImagePickerDemo */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-LDXImagePickerDemo"; path = Pods_LDXImagePickerDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -133,10 +121,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		60629848AC7039DF7A16ADA98C354110 /* Frameworks */ = {
+		3B138C8DF02A4E348DA4C46E68591E1C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F9F31B2F174838C9A9793BFA011E6D0 /* CoreGraphics.framework in Frameworks */,
+				CBD776FF13C891C9EBCCB7063382FDAB /* Foundation.framework in Frameworks */,
+				2DFB4FC239DBFF165A2AA7FA51490E37 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,16 +136,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4478EBFDC0FD002E3F5C854963F3CC4B /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		80C07631E71FF619BFF0C5C69B27E4EE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D250B927BBD5D30C14B68979568FCA88 /* CoreGraphics.framework in Frameworks */,
-				819C90109122B27D5C6D07457C8E4AD1 /* Foundation.framework in Frameworks */,
-				ED77585753A729872533A23867C43E84 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,22 +150,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		16758BCC5E69697B4AA026B25DDAA28A /* Pods-LDXImagePickerDemo */ = {
+		09EE85C8FA58B59E29BAFF71B26B2D31 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				077B7AD0F1BA1E816F6A8D85CD6C77C5 /* Pods-LDXImagePickerDemo.modulemap */,
-				1F06082F1F2B69C82C35A4A3AE0AD9BB /* Pods-LDXImagePickerDemo-acknowledgements.markdown */,
-				4CECFEF91F30C3C4BC256396CCE07280 /* Pods-LDXImagePickerDemo-acknowledgements.plist */,
-				98A5D3AA5D4A6E098F02D2A5EFC21409 /* Pods-LDXImagePickerDemo-dummy.m */,
-				05ACD357830AEEC3E8EA57EAAAE61ED0 /* Pods-LDXImagePickerDemo-frameworks.sh */,
-				CA7017CDB6193DA778076C3B6F991DD0 /* Pods-LDXImagePickerDemo-Info.plist */,
-				D1082C74168695C3E16BB962A4BA8407 /* Pods-LDXImagePickerDemo-resources.sh */,
-				B3E03B6DBE93D294338ACAB2317EAA4E /* Pods-LDXImagePickerDemo-umbrella.h */,
-				F65730C5CA2152F04AE97302A58CCDAC /* Pods-LDXImagePickerDemo.debug.xcconfig */,
-				3C9E799DF891B2BFC3C815454B3D2113 /* Pods-LDXImagePickerDemo.release.xcconfig */,
+				20BA116F767EEAA64FE8E755A4642044 /* Pods-LDXImagePicker */,
+				DEA96428B8D5D7A63CF21B45BC6FBDFC /* Pods-LDXImagePickerDemo */,
 			);
-			name = "Pods-LDXImagePickerDemo";
-			path = "Target Support Files/Pods-LDXImagePickerDemo";
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		20BA116F767EEAA64FE8E755A4642044 /* Pods-LDXImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				CEE9B6ABB5CB3C07AA627D84B228F4D4 /* Pods-LDXImagePicker.modulemap */,
+				04C93935C190F9D1D714AFAD88C88ED4 /* Pods-LDXImagePicker-acknowledgements.markdown */,
+				054B073A7A5D3D9E7558823BF27A7016 /* Pods-LDXImagePicker-acknowledgements.plist */,
+				1FCBCF0942EC3F5F6499ADCFC815AC96 /* Pods-LDXImagePicker-dummy.m */,
+				BF7F0EA4B116ABEBC9B05A835AEF901F /* Pods-LDXImagePicker-Info.plist */,
+				4A9BBCA38D20C0814225464E78990CB2 /* Pods-LDXImagePicker-umbrella.h */,
+				25686026D4E5C892326AC7FC2BBC0AAC /* Pods-LDXImagePicker.debug.xcconfig */,
+				5521668712BA01374090BB92EBADE620 /* Pods-LDXImagePicker.release.xcconfig */,
+			);
+			name = "Pods-LDXImagePicker";
+			path = "Target Support Files/Pods-LDXImagePicker";
 			sourceTree = "<group>";
 		};
 		3F242479102E24C5847AB040CB8095A8 /* Pods */ = {
@@ -216,12 +204,29 @@
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
-		A89A8B1FABA5351ECC3EE7A16EAB8CDC /* Support Files */ = {
+		80789DAED254D98A7D49F89A1A6A1683 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				E77D835065E77D67C9E148D3072F59CD /* LDXImagePicker.debug.xcconfig */,
-				EFFAE6E79CE68557986C76B01519DA67 /* LDXImagePicker.release.xcconfig */,
-				917D0CE61AA4938A5A8E71F205FFBD89 /* ResourceBundle-LDXImagePicker-LDXImagePicker-Info.plist */,
+				E8DDF98719C9942DB893E644D876C5A3 /* LDXImagePicker.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		8AA3C2BA6036A9DC3083C395FD573234 /* LDXImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				80789DAED254D98A7D49F89A1A6A1683 /* Pod */,
+				987F0541DE7C2B383C875A883A49C45C /* Support Files */,
+			);
+			name = LDXImagePicker;
+			path = ../LDXImagePicker;
+			sourceTree = "<group>";
+		};
+		987F0541DE7C2B383C875A883A49C45C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E5D8452FAF98EF99E8DD3DF97C2191DC /* LDXImagePicker.debug.xcconfig */,
+				18C0842C2EEA6DA232B0D2B40848A939 /* LDXImagePicker.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Pods/Target Support Files/LDXImagePicker";
@@ -230,20 +235,9 @@
 		AA66E8A2BED69B24A0DC83DCC3ED054C /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CD7B54EF7007D17AB38762F11A1535B4 /* LDXImagePicker */,
+				8AA3C2BA6036A9DC3083C395FD573234 /* LDXImagePicker */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		AEA4B57DFCA8F77523AD971FBB5A4EE7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4813588FBA541C8E7E00143FB7351B6B /* LDXImagePicker-LDXImagePicker */,
-				8B8FAB0D627B17EDE1366984278705D9 /* MBProgressHUD */,
-				148386C0A420B5C6573C656D0B99A233 /* Pods-LDXImagePicker */,
-				FD7FC2731A1682BF1578C33B7AE2A3B7 /* Pods-LDXImagePickerDemo */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		C86A493F744575B77BC85AB9B143DAC2 /* Support Files */ = {
@@ -261,31 +255,14 @@
 			path = "../Target Support Files/MBProgressHUD";
 			sourceTree = "<group>";
 		};
-		CB93F0D77DB0003AF89886A82FDCEC79 /* Pods-LDXImagePicker */ = {
+		CE573D22E6092BE0EBAC5A8589FF2E04 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8D51F4DE9DB46D717EBC164C16E51170 /* Pods-LDXImagePicker.modulemap */,
-				9F931FE924977CFF4503587FB72252D7 /* Pods-LDXImagePicker-acknowledgements.markdown */,
-				DC80EF6679EC3A93FA637160A0E7E81C /* Pods-LDXImagePicker-acknowledgements.plist */,
-				2C9E25FED336C13C778DF1E93BD62EFA /* Pods-LDXImagePicker-dummy.m */,
-				4B85B0FE0C45110B8CEF10774C5E4BE3 /* Pods-LDXImagePicker-Info.plist */,
-				23B9368FE35EC159FD88F4167E250A0E /* Pods-LDXImagePicker-resources.sh */,
-				A6562B11B8891663336B9D6881E31C1E /* Pods-LDXImagePicker-umbrella.h */,
-				6594D08C2580A7D472909FEEC44DCCF6 /* Pods-LDXImagePicker.debug.xcconfig */,
-				50F684DEBC974701360AA56E8F9C850E /* Pods-LDXImagePicker.release.xcconfig */,
+				8B8FAB0D627B17EDE1366984278705D9 /* MBProgressHUD */,
+				148386C0A420B5C6573C656D0B99A233 /* Pods-LDXImagePicker */,
+				FD7FC2731A1682BF1578C33B7AE2A3B7 /* Pods-LDXImagePickerDemo */,
 			);
-			name = "Pods-LDXImagePicker";
-			path = "Target Support Files/Pods-LDXImagePicker";
-			sourceTree = "<group>";
-		};
-		CD7B54EF7007D17AB38762F11A1535B4 /* LDXImagePicker */ = {
-			isa = PBXGroup;
-			children = (
-				DD5C817B303388A8CDF208F50102DC58 /* Pod */,
-				A89A8B1FABA5351ECC3EE7A16EAB8CDC /* Support Files */,
-			);
-			name = LDXImagePicker;
-			path = ../LDXImagePicker;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -295,26 +272,26 @@
 				AA66E8A2BED69B24A0DC83DCC3ED054C /* Development Pods */,
 				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
 				3F242479102E24C5847AB040CB8095A8 /* Pods */,
-				AEA4B57DFCA8F77523AD971FBB5A4EE7 /* Products */,
-				D05239A5C01E63F3256513406B06A2AB /* Targets Support Files */,
+				CE573D22E6092BE0EBAC5A8589FF2E04 /* Products */,
+				09EE85C8FA58B59E29BAFF71B26B2D31 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D05239A5C01E63F3256513406B06A2AB /* Targets Support Files */ = {
+		DEA96428B8D5D7A63CF21B45BC6FBDFC /* Pods-LDXImagePickerDemo */ = {
 			isa = PBXGroup;
 			children = (
-				CB93F0D77DB0003AF89886A82FDCEC79 /* Pods-LDXImagePicker */,
-				16758BCC5E69697B4AA026B25DDAA28A /* Pods-LDXImagePickerDemo */,
+				82FF70CDF071959033DBA681414BD7DB /* Pods-LDXImagePickerDemo.modulemap */,
+				C5749FB296C10AE3CB10C78FDCE1D038 /* Pods-LDXImagePickerDemo-acknowledgements.markdown */,
+				279E8A5274E1F36306F6C519F267D313 /* Pods-LDXImagePickerDemo-acknowledgements.plist */,
+				8B8B8A3B1AF959BABAA50A1DFC953FCA /* Pods-LDXImagePickerDemo-dummy.m */,
+				A8120BE6BC2FB10E1F29E5F7702927F7 /* Pods-LDXImagePickerDemo-frameworks.sh */,
+				0F28CABE74FC591FB7C81109107CA9E7 /* Pods-LDXImagePickerDemo-Info.plist */,
+				975D9D8F1D7F3DAEAE0BBBC683232C27 /* Pods-LDXImagePickerDemo-umbrella.h */,
+				70A7F384C5BD8E65C270EF041BA01F77 /* Pods-LDXImagePickerDemo.debug.xcconfig */,
+				EB6340CE587BA1BBBD3B370BA327C0FF /* Pods-LDXImagePickerDemo.release.xcconfig */,
 			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		DD5C817B303388A8CDF208F50102DC58 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				A1178CED6316E299D50CEF047E09F66F /* LDXImagePicker.podspec */,
-			);
-			name = Pod;
+			name = "Pods-LDXImagePickerDemo";
+			path = "Target Support Files/Pods-LDXImagePickerDemo";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,12 +305,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C03841F7B07CCA7F231B7F7F2E825A4 /* Headers */ = {
+		475610F58868D761C952DE4ACDFD3312 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D082DE32934D69E49D40E1E89879F0DC /* MBProgressHUD.h in Headers */,
-				786B41141403B6D3774997134E884FAC /* MBProgressHUD-umbrella.h in Headers */,
+				5D2E43E97AB401BECFCB5CD8E7276F31 /* MBProgressHUD.h in Headers */,
+				3BE1C359000FFF0720ED527134D27888 /* MBProgressHUD-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,23 +325,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0660701BD8C556625B3F944A4D0232C3 /* LDXImagePicker-LDXImagePicker */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BB5F19ED8E506C1E581EDECF179AC3A1 /* Build configuration list for PBXNativeTarget "LDXImagePicker-LDXImagePicker" */;
-			buildPhases = (
-				2805433ACA34B1A0852FBF09F94CB1C8 /* Sources */,
-				60629848AC7039DF7A16ADA98C354110 /* Frameworks */,
-				109B766C008F5E50A1F76A631C8B4577 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "LDXImagePicker-LDXImagePicker";
-			productName = LDXImagePicker;
-			productReference = 4813588FBA541C8E7E00143FB7351B6B /* LDXImagePicker-LDXImagePicker */;
-			productType = "com.apple.product-type.bundle";
-		};
 		0C44454B834FA80DF94B83D35FE35942 /* Pods-LDXImagePicker */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F7A0A614A12251C2EA961BE35F08963 /* Build configuration list for PBXNativeTarget "Pods-LDXImagePicker" */;
@@ -378,7 +338,7 @@
 			);
 			dependencies = (
 				42E76D3ACD75A731DB966FA1B3B6534A /* PBXTargetDependency */,
-				2A942654C15DE83CDCFE166CAEA2BF7F /* PBXTargetDependency */,
+				7C519F21C115ECB4480B8AC8C284D3A6 /* PBXTargetDependency */,
 			);
 			name = "Pods-LDXImagePicker";
 			productName = Pods_LDXImagePicker;
@@ -387,12 +347,12 @@
 		};
 		82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 777B34CE2D162A0D9D4F71A20734FD36 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
+			buildConfigurationList = CE076F62B58B1E208D60677655DC2731 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
 			buildPhases = (
-				8C03841F7B07CCA7F231B7F7F2E825A4 /* Headers */,
-				F5F71CEA58B8FB5C0B430B6F938BAC65 /* Sources */,
-				80C07631E71FF619BFF0C5C69B27E4EE /* Frameworks */,
-				892B4043962AFBFA9A789CEF42180852 /* Resources */,
+				475610F58868D761C952DE4ACDFD3312 /* Headers */,
+				517CEA4F474A50DEFBCF20D8FBF7A55D /* Sources */,
+				3B138C8DF02A4E348DA4C46E68591E1C /* Frameworks */,
+				8387AAD96A31F8FED491292D5DCAEC1F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -416,7 +376,7 @@
 			);
 			dependencies = (
 				73E2E55FAA24373C35B06C905EF3949E /* PBXTargetDependency */,
-				FFFEF35A40EFAD7C841A768E2A3CFA64 /* PBXTargetDependency */,
+				07BAA93C04DE6AFF2506A71F0E344D9D /* PBXTargetDependency */,
 			);
 			name = "Pods-LDXImagePickerDemo";
 			productName = Pods_LDXImagePickerDemo;
@@ -441,12 +401,11 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = AEA4B57DFCA8F77523AD971FBB5A4EE7 /* Products */;
+			productRefGroup = CE573D22E6092BE0EBAC5A8589FF2E04 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				C1F70AD67217A9D7EAA196E18E140DF6 /* LDXImagePicker */,
-				0660701BD8C556625B3F944A4D0232C3 /* LDXImagePicker-LDXImagePicker */,
 				82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */,
 				0C44454B834FA80DF94B83D35FE35942 /* Pods-LDXImagePicker */,
 				D8935D334E1373401B45CBF875B30BDE /* Pods-LDXImagePickerDemo */,
@@ -455,13 +414,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		109B766C008F5E50A1F76A631C8B4577 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		249DB478C09EB3DE018D447F69AF2150 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -476,7 +428,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		892B4043962AFBFA9A789CEF42180852 /* Resources */ = {
+		8387AAD96A31F8FED491292D5DCAEC1F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -486,18 +438,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2805433ACA34B1A0852FBF09F94CB1C8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2CE07BB05202954A093BF277AF73C358 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1A3E6559980B30A457F4652D4FDBBA5D /* Pods-LDXImagePicker-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		517CEA4F474A50DEFBCF20D8FBF7A55D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5205EDA90BF086A5A2AB6ECE8004D1FF /* MBProgressHUD.m in Sources */,
+				5E275994E71F7B29DC6432D4994B6E64 /* MBProgressHUD-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,29 +463,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F5F71CEA58B8FB5C0B430B6F938BAC65 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EFB4ACA3CFE7AC82C99D0CDB2407C064 /* MBProgressHUD.m in Sources */,
-				08DDCAF000F3A457DF49DF027A78555F /* MBProgressHUD-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		14D0AED4A447FCB9AE8E8DD8F1B9B3DD /* PBXTargetDependency */ = {
+		07BAA93C04DE6AFF2506A71F0E344D9D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MBProgressHUD;
 			target = 82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */;
-			targetProxy = 346D26070BE6916F127E3F80BC19968D /* PBXContainerItemProxy */;
-		};
-		2A942654C15DE83CDCFE166CAEA2BF7F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MBProgressHUD;
-			target = 82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */;
-			targetProxy = C86B64AC44FB2A1EF02B62D4591F1F73 /* PBXContainerItemProxy */;
+			targetProxy = E4C8CE2474DD592ACC2B5BE0E001E194 /* PBXContainerItemProxy */;
 		};
 		42E76D3ACD75A731DB966FA1B3B6534A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -539,11 +478,11 @@
 			target = C1F70AD67217A9D7EAA196E18E140DF6 /* LDXImagePicker */;
 			targetProxy = 0E5BF6499EDE9651F4CB31B0745BE18E /* PBXContainerItemProxy */;
 		};
-		4FD48DDF644CEE554487C3949DC6B935 /* PBXTargetDependency */ = {
+		72E9589476BDFDAF4FDDE0D838D0F3CE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "LDXImagePicker-LDXImagePicker";
-			target = 0660701BD8C556625B3F944A4D0232C3 /* LDXImagePicker-LDXImagePicker */;
-			targetProxy = D79ADC24B2D6C553B71CC80B8E9466B7 /* PBXContainerItemProxy */;
+			name = MBProgressHUD;
+			target = 82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */;
+			targetProxy = DF855B11953EFDBC42646BF7FEF46EDA /* PBXContainerItemProxy */;
 		};
 		73E2E55FAA24373C35B06C905EF3949E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -551,11 +490,11 @@
 			target = C1F70AD67217A9D7EAA196E18E140DF6 /* LDXImagePicker */;
 			targetProxy = 18000C634D536B5AE5DDC56DA84A531D /* PBXContainerItemProxy */;
 		};
-		FFFEF35A40EFAD7C841A768E2A3CFA64 /* PBXTargetDependency */ = {
+		7C519F21C115ECB4480B8AC8C284D3A6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MBProgressHUD;
 			target = 82B0A41D3031FF27D78E17B0A9A46FB0 /* MBProgressHUD */;
-			targetProxy = E9ECA589E7DA5FEA2ABA45854FCCDCA4 /* PBXContainerItemProxy */;
+			targetProxy = AB925A83FAD2D4BF18BAA9C69E279217 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -628,7 +567,7 @@
 		};
 		32F2C18642021F54D67BC132CFD6E5AA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6594D08C2580A7D472909FEEC44DCCF6 /* Pods-LDXImagePicker.debug.xcconfig */;
+			baseConfigurationReference = 25686026D4E5C892326AC7FC2BBC0AAC /* Pods-LDXImagePicker.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -662,129 +601,9 @@
 			};
 			name = Debug;
 		};
-		36EAC84D7A3E0900105E3A18A4998B4D /* Debug */ = {
+		54443AD2EB0C0CB76FF91D9C012D4970 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E77D835065E77D67C9E148D3072F59CD /* LDXImagePicker.debug.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/LDXImagePicker";
-				IBSC_MODULE = LDXImagePicker;
-				INFOPLIST_FILE = "Target Support Files/LDXImagePicker/ResourceBundle-LDXImagePicker-LDXImagePicker-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = LDXImagePicker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		679B4A6EE8FDC9967F936BD067571F38 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E221A5AAC45302AF396416395265FFD /* MBProgressHUD.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD.modulemap";
-				PRODUCT_MODULE_NAME = MBProgressHUD;
-				PRODUCT_NAME = MBProgressHUD;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		884F7DE47A3ED02DEFA3838527A9AAD5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50F684DEBC974701360AA56E8F9C850E /* Pods-LDXImagePicker.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-LDXImagePicker/Pods-LDXImagePicker-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-LDXImagePicker/Pods-LDXImagePicker.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		ABCBD6E18A384C2C385B83969A7CCF0E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6CEB62E30C5BAB8D4A2A435A4D4DA33A /* MBProgressHUD.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD.modulemap";
-				PRODUCT_MODULE_NAME = MBProgressHUD;
-				PRODUCT_NAME = MBProgressHUD;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		AE063466A2EFB75F662FE058D7E7EF00 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E77D835065E77D67C9E148D3072F59CD /* LDXImagePicker.debug.xcconfig */;
+			baseConfigurationReference = 18C0842C2EEA6DA232B0D2B40848A939 /* LDXImagePicker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -795,12 +614,50 @@
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
+		};
+		884F7DE47A3ED02DEFA3838527A9AAD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5521668712BA01374090BB92EBADE620 /* Pods-LDXImagePicker.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-LDXImagePicker/Pods-LDXImagePicker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LDXImagePicker/Pods-LDXImagePicker.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		C11B33A839718C06E036D0D117B50528 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C9E799DF891B2BFC3C815454B3D2113 /* Pods-LDXImagePickerDemo.release.xcconfig */;
+			baseConfigurationReference = EB6340CE587BA1BBBD3B370BA327C0FF /* Pods-LDXImagePickerDemo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -834,6 +691,22 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		C6E3611686BA28A98288DD69FC4EF66F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5D8452FAF98EF99E8DD3DF97C2191DC /* LDXImagePicker.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -897,42 +770,9 @@
 			};
 			name = Release;
 		};
-		D80C25C224E2DBA7B8FDB00512D87C7B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFFAE6E79CE68557986C76B01519DA67 /* LDXImagePicker.release.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/LDXImagePicker";
-				IBSC_MODULE = LDXImagePicker;
-				INFOPLIST_FILE = "Target Support Files/LDXImagePicker/ResourceBundle-LDXImagePicker-LDXImagePicker-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = LDXImagePicker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		E0854C99D365C2EEFBA1CA28392EAA02 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFFAE6E79CE68557986C76B01519DA67 /* LDXImagePicker.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		E2E0635A1E94A10F205724C34D5C941A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F65730C5CA2152F04AE97302A58CCDAC /* Pods-LDXImagePickerDemo.debug.xcconfig */;
+			baseConfigurationReference = 70A7F384C5BD8E65C270EF041BA01F77 /* Pods-LDXImagePickerDemo.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -966,6 +806,73 @@
 			};
 			name = Debug;
 		};
+		EA18699406766F19BD8CA1BE43A2DC1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CEB62E30C5BAB8D4A2A435A4D4DA33A /* MBProgressHUD.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD.modulemap";
+				PRODUCT_MODULE_NAME = MBProgressHUD;
+				PRODUCT_NAME = MBProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F96233DF53B9749DBF025A56E40E97F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E221A5AAC45302AF396416395265FFD /* MBProgressHUD.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD.modulemap";
+				PRODUCT_MODULE_NAME = MBProgressHUD;
+				PRODUCT_NAME = MBProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -974,15 +881,6 @@
 			buildConfigurations = (
 				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
 				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		59010157239C585B9E13D6DC7C69F1D8 /* Build configuration list for PBXAggregateTarget "LDXImagePicker" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AE063466A2EFB75F662FE058D7E7EF00 /* Debug */,
-				E0854C99D365C2EEFBA1CA28392EAA02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -996,20 +894,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		777B34CE2D162A0D9D4F71A20734FD36 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
+		98AB698C8B8D44C5A1C2F0807F91BC8F /* Build configuration list for PBXAggregateTarget "LDXImagePicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				679B4A6EE8FDC9967F936BD067571F38 /* Debug */,
-				ABCBD6E18A384C2C385B83969A7CCF0E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BB5F19ED8E506C1E581EDECF179AC3A1 /* Build configuration list for PBXNativeTarget "LDXImagePicker-LDXImagePicker" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				36EAC84D7A3E0900105E3A18A4998B4D /* Debug */,
-				D80C25C224E2DBA7B8FDB00512D87C7B /* Release */,
+				C6E3611686BA28A98288DD69FC4EF66F /* Debug */,
+				54443AD2EB0C0CB76FF91D9C012D4970 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1019,6 +908,15 @@
 			buildConfigurations = (
 				E2E0635A1E94A10F205724C34D5C941A /* Debug */,
 				C11B33A839718C06E036D0D117B50528 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE076F62B58B1E208D60677655DC2731 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F96233DF53B9749DBF025A56E40E97F1 /* Debug */,
+				EA18699406766F19BD8CA1BE43A2DC1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

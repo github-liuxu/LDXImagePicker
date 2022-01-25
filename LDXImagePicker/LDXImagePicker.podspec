@@ -9,8 +9,7 @@ Pod::Spec.new do |s|
   s.social_media_url = ""
   s.source_files     = "LDXImagePicker/*.{h,m}"
   s.exclude_files    = "LDXImagePicker/LDXImagePicker.h"
-  s.resource_bundles = { "LDXImagePicker" => "LDXImagePicker/*.{lproj,storyboard}" }
-  s.resources = 'LDXImagePicker/Assets.xcassets'
+  s.resources        = 'LDXImagePicker/*.{lproj,storyboard,xcassets}'
   s.platform         = :ios, "9.0"
   s.requires_arc     = true
   s.frameworks       = "Photos"

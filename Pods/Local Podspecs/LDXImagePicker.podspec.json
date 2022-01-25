@@ -14,10 +14,7 @@
   "social_media_url": "",
   "source_files": "LDXImagePicker/*.{h,m}",
   "exclude_files": "LDXImagePicker/LDXImagePicker.h",
-  "resource_bundles": {
-    "LDXImagePicker": "LDXImagePicker/*.{lproj,storyboard}"
-  },
-  "resources": "LDXImagePicker/Assets.xcassets",
+  "resources": "LDXImagePicker/*.{lproj,storyboard,xcassets}",
   "platforms": {
     "ios": "9.0"
   },

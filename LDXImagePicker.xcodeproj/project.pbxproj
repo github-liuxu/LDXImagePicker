@@ -327,7 +327,6 @@
 				AAA8FDFF1ACDA079002A9710 /* Frameworks */,
 				AAA8FE001ACDA079002A9710 /* Headers */,
 				AAA8FE011ACDA079002A9710 /* Resources */,
-				4A63C97FF64E17A2944ADA79 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -348,7 +347,6 @@
 				AAA8FE251ACDA0CE002A9710 /* Resources */,
 				AAA8FE581ACDA1F6002A9710 /* Embed Frameworks */,
 				5E5556C48C77793722D35D01 /* [CP] Embed Pods Frameworks */,
-				C10F2037F9733C1321C92CF8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -428,23 +426,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4A63C97FF64E17A2944ADA79 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LDXImagePicker/Pods-LDXImagePicker-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LDXImagePicker/Pods-LDXImagePicker-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LDXImagePicker/Pods-LDXImagePicker-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5E5556C48C77793722D35D01 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -504,23 +485,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C10F2037F9733C1321C92CF8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LDXImagePickerDemo/Pods-LDXImagePickerDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LDXImagePickerDemo/Pods-LDXImagePickerDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LDXImagePickerDemo/Pods-LDXImagePickerDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
