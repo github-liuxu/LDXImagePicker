@@ -12,7 +12,7 @@
 		0C8F6B4B279EEEC9005F18FC /* LDXAlbumProgressViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C8F6B49279EEEC9005F18FC /* LDXAlbumProgressViewController.h */; };
 		0C8F6B4E279EF45C005F18FC /* LDXAlbumCircleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C8F6B4C279EF45C005F18FC /* LDXAlbumCircleView.h */; };
 		0C8F6B4F279EF45C005F18FC /* LDXAlbumCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F6B4D279EF45C005F18FC /* LDXAlbumCircleView.m */; };
-		0C8F6B52279F01DD005F18FC /* LDXAlbumToast.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C8F6B50279F01DD005F18FC /* LDXAlbumToast.h */; };
+		0C8F6B52279F01DD005F18FC /* LDXAlbumToast.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C8F6B50279F01DD005F18FC /* LDXAlbumToast.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0C8F6B53279F01DD005F18FC /* LDXAlbumToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F6B51279F01DD005F18FC /* LDXAlbumToast.m */; };
 		790A850F1AE7D4D9008E2A80 /* LDXSlomoIconView.h in Headers */ = {isa = PBXBuildFile; fileRef = 790A850D1AE7D4D9008E2A80 /* LDXSlomoIconView.h */; };
 		790A85101AE7D4D9008E2A80 /* LDXSlomoIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 790A850E1AE7D4D9008E2A80 /* LDXSlomoIconView.m */; };

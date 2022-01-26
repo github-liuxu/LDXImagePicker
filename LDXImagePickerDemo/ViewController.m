@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <LDXImagePicker/LDXImagePicker.h>
+//#import <LDXImagePicker/LDXAlbumToast.h>
 
 @interface ViewController () <LDXImagePickerControllerDelegate>
 
