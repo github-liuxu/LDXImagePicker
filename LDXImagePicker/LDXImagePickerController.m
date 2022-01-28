@@ -45,6 +45,36 @@
         self.assetBundle = [NSBundle bundleWithPath:bundlePath];
     }
     
+    if ([PHPhotoLibrary authorizationStatus] == PHAuthorizationStatusAuthorized) {
+        [self setUp];
+    } else if ([PHPhotoLibrary authorizationStatus] == PHAuthorizationStatusDenied) {
+        [self presentPermissions];
+    } else if ([PHPhotoLibrary authorizationStatus] == PHAuthorizationStatusNotDetermined) {
+        __weak typeof(self)weakSelf = self;
+        [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (status == PHAuthorizationStatusDenied || status == PHAuthorizationStatusRestricted) {
+                    [weakSelf presentPermissions];
+                } else {
+                    [weakSelf setUp];
+                }
+            });
+        }];
+    }
+}
+
+- (void)presentPermissions {
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"No access" message:@"Album access not allowed" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *skipAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    
+    [alertVC addAction:skipAction];
+    
+    [self presentViewController:alertVC animated:YES completion:nil];
+}
+
+- (void)setUp{
     [self setUpAlbumsViewController];
     
     // Set instance
