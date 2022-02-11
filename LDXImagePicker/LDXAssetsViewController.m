@@ -398,7 +398,7 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
     @autoreleasepool {
         if (asset.mediaType == PHAssetMediaTypeVideo) {
             PHVideoRequestOptions *option = [[PHVideoRequestOptions alloc] init];
-            option.version = PHVideoRequestOptionsVersionOriginal;
+            option.version = PHVideoRequestOptionsVersionCurrent;
             option.deliveryMode = PHVideoRequestOptionsDeliveryModeHighQualityFormat;
             [[PHImageManager defaultManager] requestAVAssetForVideo:asset
                                                             options:option
@@ -413,7 +413,7 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
                                                       }];
         } else {
             PHImageRequestOptions *options = [PHImageRequestOptions new];
-            options.version = PHImageRequestOptionsVersionOriginal;
+            options.version = PHImageRequestOptionsVersionCurrent;
             options.deliveryMode = PHImageRequestOptionsDeliveryModeHighQualityFormat;
             options.synchronous = YES;
             [[PHImageManager defaultManager] requestImageDataForAsset:asset options:options resultHandler:^(NSData * _Nullable imageData, NSString * _Nullable dataUTI, UIImageOrientation orientation, NSDictionary * _Nullable info) {
@@ -461,7 +461,7 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
         if (asset.mediaType == PHAssetMediaTypeVideo) {
             PHVideoRequestOptions *option = [[PHVideoRequestOptions alloc]init];
             option.networkAccessAllowed = YES;
-            option.version = PHVideoRequestOptionsVersionOriginal;
+            option.version = PHVideoRequestOptionsVersionCurrent;
             option.deliveryMode = PHVideoRequestOptionsDeliveryModeHighQualityFormat;
             option.progressHandler = ^(double progress, NSError *__nullable error, BOOL *stop, NSDictionary *__nullable info) {
                 NSLog(@"%f",progress);
@@ -492,7 +492,7 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
         } else {
             PHImageRequestOptions *options = [PHImageRequestOptions new];
             options.resizeMode = PHImageRequestOptionsResizeModeFast;
-            options.version = PHImageRequestOptionsVersionOriginal;
+            options.version = PHImageRequestOptionsVersionCurrent;
             options.deliveryMode = PHImageRequestOptionsDeliveryModeHighQualityFormat;
             options.networkAccessAllowed = YES;
             options.progressHandler = ^(double progress, NSError *__nullable error, BOOL *stop, NSDictionary *__nullable info) {
