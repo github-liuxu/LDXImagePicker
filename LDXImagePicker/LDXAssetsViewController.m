@@ -395,6 +395,22 @@ static PHVideoRequestOptionsDeliveryMode videoDeliveryMode = PHVideoRequestOptio
     return assets;
 }
 
+- (void)reloadVisibleIndex {
+//    NSArray <LDXAssetCell *>*visibleCell = [self.collectionView visibleCells];
+    NSMutableArray <LDXAssetCell *>*visibleCell = [NSMutableArray arrayWithArray:[self.collectionView visibleCells]];
+    [self.imagePickerController.selectedAssets enumerateObjectsUsingBlock:^(PHAsset *  _Nonnull asset, NSUInteger idxNum, BOOL * _Nonnull stop) {
+        [visibleCell enumerateObjectsUsingBlock:^(LDXAssetCell * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stopCell) {
+            if (obj.asset == asset) {
+                [obj setSelected:YES];
+                [obj setIndexNumber:idxNum + 1];
+                [obj.checkmarkView setNeedsDisplay];
+                [visibleCell removeObject:obj];
+                *stopCell = true;
+            }
+        }];
+    }];
+}
+
 - (BOOL)checkAssetInICloud:(PHAsset *)asset {
     if(!asset)
         return NO;
@@ -539,7 +555,7 @@ static PHVideoRequestOptionsDeliveryMode videoDeliveryMode = PHVideoRequestOptio
         if ([self isAutoDeselectEnabled] && selectedAssets.count > 0) {
             // Remove previous selected asset from set
             [selectedAssets removeObjectAtIndex:0];
-            
+            [self reloadVisibleIndex];
             // Deselect previous selected asset
             if (self.lastSelectedItemIndexPath) {
                 [self.collectionView deselectItemAtIndexPath:self.lastSelectedItemIndexPath animated:NO];
@@ -548,7 +564,7 @@ static PHVideoRequestOptionsDeliveryMode videoDeliveryMode = PHVideoRequestOptio
         
         // Add asset to set
         [selectedAssets addObject:asset];
-        
+        [self reloadVisibleIndex];
         self.lastSelectedItemIndexPath = indexPath;
         
         [self updateDoneButtonState];
@@ -642,7 +658,7 @@ static PHVideoRequestOptionsDeliveryMode videoDeliveryMode = PHVideoRequestOptio
     PHAsset *asset = self.fetchResult[indexPath.item];
     CGSize itemSize = [(UICollectionViewFlowLayout *)collectionView.collectionViewLayout itemSize];
     CGSize targetSize = CGSizeScale(itemSize, [[UIScreen mainScreen] scale]);
-    
+    cell.asset = asset;
     [self.imageManager requestImageForAsset:asset
                                  targetSize:targetSize
                                 contentMode:PHImageContentModeAspectFill
@@ -676,6 +692,8 @@ static PHVideoRequestOptionsDeliveryMode videoDeliveryMode = PHVideoRequestOptio
     // Selection state
     if ([self.imagePickerController.selectedAssets containsObject:asset]) {
         [cell setSelected:YES];
+        NSUInteger indexNumber = [self.imagePickerController.selectedAssets indexOfObject:asset];
+        cell.indexNumber = indexNumber + 1;
         [collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
     }
     
@@ -746,6 +764,19 @@ static PHVideoRequestOptionsDeliveryMode videoDeliveryMode = PHVideoRequestOptio
 
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    LDXImagePickerController *imagePickerController = self.imagePickerController;
+    NSMutableOrderedSet *selectedAssets = imagePickerController.selectedAssets;
+    
+    PHAsset *asset = self.fetchResult[indexPath.item];
+    if ([self checkAssetInICloud:asset]) {
+        __weak typeof(self)weakSelf = self;
+        [self downloadAssetFromiCloud:asset complate:^(PHAsset *ass) {
+            if (ass)
+                [weakSelf SelectItemAtIndex:imagePickerController selectedAssets:selectedAssets asset:ass indexPath:indexPath];
+        }];
+        return NO;
+    }
+    
     if ([self.imagePickerController.delegate respondsToSelector:@selector(ldx_imagePickerController:shouldSelectAsset:)]) {
         PHAsset *asset = self.fetchResult[indexPath.item];
         return [self.imagePickerController.delegate ldx_imagePickerController:self.imagePickerController shouldSelectAsset:asset];
@@ -788,7 +819,7 @@ static PHVideoRequestOptionsDeliveryMode videoDeliveryMode = PHVideoRequestOptio
     
     // Remove asset from set
     [selectedAssets removeObject:asset];
-    
+    [self reloadVisibleIndex];
     self.lastSelectedItemIndexPath = nil;
     
     [self updateDoneButtonState];

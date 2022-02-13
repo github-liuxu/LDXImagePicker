@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LDXCheckmarkView.h"
+@import Photos;
 
 @class LDXVideoIndicatorView;
 
@@ -16,5 +18,8 @@
 @property (weak, nonatomic) IBOutlet LDXVideoIndicatorView *videoIndicatorView;
 
 @property (nonatomic, assign) BOOL showsOverlayViewWhenSelected;
+@property (nonatomic, assign) NSUInteger indexNumber;
+@property (weak, nonatomic) IBOutlet LDXCheckmarkView *checkmarkView;
+@property (nonatomic, strong) PHAsset *asset;
 
 @end

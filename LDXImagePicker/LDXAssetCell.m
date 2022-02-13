@@ -24,4 +24,10 @@
     self.overlayView.hidden = !(selected && self.showsOverlayViewWhenSelected);
 }
 
+- (void)setIndexNumber:(NSUInteger)indexNumber {
+    _indexNumber = indexNumber;
+    self.checkmarkView.indexNumber = indexNumber;
+    [self.checkmarkView setNeedsDisplay];
+}
+
 @end

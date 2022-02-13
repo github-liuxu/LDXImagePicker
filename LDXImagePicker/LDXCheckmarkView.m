@@ -13,7 +13,7 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-    
+    self.indexNumber = 1;
     // Set default values
     self.borderWidth = 1.0;
     self.checkmarkLineWidth = 1.2;
@@ -39,16 +39,20 @@
     [self.bodyColor setFill];
     [[UIBezierPath bezierPathWithOvalInRect:CGRectInset(self.bounds, self.borderWidth, self.borderWidth)] fill];
     
-    // Checkmark
-    UIBezierPath *checkmarkPath = [UIBezierPath bezierPath];
-    checkmarkPath.lineWidth = self.checkmarkLineWidth;
+    NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+    paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail;
+    paragraphStyle.alignment = NSTextAlignmentCenter;
     
-    [checkmarkPath moveToPoint:CGPointMake(CGRectGetWidth(self.bounds) * (6.0 / 24.0), CGRectGetHeight(self.bounds) * (12.0 / 24.0))];
-    [checkmarkPath addLineToPoint:CGPointMake(CGRectGetWidth(self.bounds) * (10.0 / 24.0), CGRectGetHeight(self.bounds) * (16.0 / 24.0))];
-    [checkmarkPath addLineToPoint:CGPointMake(CGRectGetWidth(self.bounds) * (18.0 / 24.0), CGRectGetHeight(self.bounds) * (8.0 / 24.0))];
+    [[NSString stringWithFormat:@"%ld",(long)self.indexNumber] drawInRect:CGRectInset(rect, 0, 3) withAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14],NSForegroundColorAttributeName:[UIColor whiteColor],NSParagraphStyleAttributeName:paragraphStyle}];
+//    // Checkmark
+//    UIBezierPath *checkmarkPath = [UIBezierPath bezierPath];
+//    checkmarkPath.lineWidth = self.checkmarkLineWidth;
+//    [checkmarkPath moveToPoint:CGPointMake(CGRectGetWidth(self.bounds) * (6.0 / 24.0), CGRectGetHeight(self.bounds) * (12.0 / 24.0))];
+//    [checkmarkPath addLineToPoint:CGPointMake(CGRectGetWidth(self.bounds) * (10.0 / 24.0), CGRectGetHeight(self.bounds) * (16.0 / 24.0))];
+//    [checkmarkPath addLineToPoint:CGPointMake(CGRectGetWidth(self.bounds) * (18.0 / 24.0), CGRectGetHeight(self.bounds) * (8.0 / 24.0))];
     
     [self.checkmarkColor setStroke];
-    [checkmarkPath stroke];
+//    [checkmarkPath stroke];
 }
 
 @end
