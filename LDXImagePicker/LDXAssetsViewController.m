@@ -77,6 +77,12 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
 @end
 
 @implementation LDXAssetsViewController
+//image option
+static PHImageRequestOptionsVersion imageVersion = PHImageRequestOptionsVersionCurrent;
+static PHImageRequestOptionsDeliveryMode imageDeliveryMode = PHImageRequestOptionsDeliveryModeHighQualityFormat;
+//video option
+static PHVideoRequestOptionsVersion videoVersion = PHVideoRequestOptionsVersionCurrent;
+static PHVideoRequestOptionsDeliveryMode videoDeliveryMode = PHVideoRequestOptionsDeliveryModeHighQualityFormat;
 
 - (void)viewDidLoad
 {
@@ -398,8 +404,8 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
     @autoreleasepool {
         if (asset.mediaType == PHAssetMediaTypeVideo) {
             PHVideoRequestOptions *option = [[PHVideoRequestOptions alloc] init];
-            option.version = PHVideoRequestOptionsVersionCurrent;
-            option.deliveryMode = PHVideoRequestOptionsDeliveryModeHighQualityFormat;
+            option.version = videoVersion;
+            option.deliveryMode = videoDeliveryMode;
             [[PHImageManager defaultManager] requestAVAssetForVideo:asset
                                                             options:option
                                                       resultHandler:^(AVAsset * avAsset, AVAudioMix * audioMix, NSDictionary * info) {
@@ -413,8 +419,8 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
                                                       }];
         } else {
             PHImageRequestOptions *options = [PHImageRequestOptions new];
-            options.version = PHImageRequestOptionsVersionCurrent;
-            options.deliveryMode = PHImageRequestOptionsDeliveryModeHighQualityFormat;
+            options.version = imageVersion;
+            options.deliveryMode = imageDeliveryMode;
             options.synchronous = YES;
             [[PHImageManager defaultManager] requestImageDataForAsset:asset options:options resultHandler:^(NSData * _Nullable imageData, NSString * _Nullable dataUTI, UIImageOrientation orientation, NSDictionary * _Nullable info) {
                 if ([[info objectForKey:PHImageResultIsInCloudKey] boolValue] && !imageData) {
@@ -461,8 +467,8 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
         if (asset.mediaType == PHAssetMediaTypeVideo) {
             PHVideoRequestOptions *option = [[PHVideoRequestOptions alloc]init];
             option.networkAccessAllowed = YES;
-            option.version = PHVideoRequestOptionsVersionCurrent;
-            option.deliveryMode = PHVideoRequestOptionsDeliveryModeHighQualityFormat;
+            option.version = videoVersion;
+            option.deliveryMode = videoDeliveryMode;
             option.progressHandler = ^(double progress, NSError *__nullable error, BOOL *stop, NSDictionary *__nullable info) {
                 NSLog(@"%f",progress);
                 dispatch_async(dispatch_get_main_queue(), ^{
@@ -492,8 +498,8 @@ static CGSize CGSizeScale(CGSize size, CGFloat scale) {
         } else {
             PHImageRequestOptions *options = [PHImageRequestOptions new];
             options.resizeMode = PHImageRequestOptionsResizeModeFast;
-            options.version = PHImageRequestOptionsVersionCurrent;
-            options.deliveryMode = PHImageRequestOptionsDeliveryModeHighQualityFormat;
+            options.version = imageVersion;
+            options.deliveryMode = imageDeliveryMode;
             options.networkAccessAllowed = YES;
             options.progressHandler = ^(double progress, NSError *__nullable error, BOOL *stop, NSDictionary *__nullable info) {
                 NSLog(@"%f",progress);
