@@ -15,12 +15,9 @@
 #import "LDXVideoIndicatorView.h"
 #import "LDXAlbumProgressViewController.h"
 #import "LDXAlbumToast.h"
+#import "LDXUtils.h"
 
 typedef void(^DownloadAsset)(PHAsset *);
-
-static CGSize CGSizeScale(CGSize size, CGFloat scale) {
-    return CGSizeMake(size.width * scale, size.height * scale);
-}
 
 @interface LDXImagePickerController (Private)
 
@@ -412,6 +409,7 @@ static PHVideoRequestOptionsDeliveryMode videoDeliveryMode = PHVideoRequestOptio
 }
 
 - (BOOL)checkAssetInICloud:(PHAsset *)asset {
+    return YES;
     if(!asset)
         return NO;
     

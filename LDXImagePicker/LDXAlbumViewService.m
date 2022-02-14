@@ -9,15 +9,14 @@
 #import "LDXAlbumViewService.h"
 // Views
 #import "LDXAlbumCell.h"
+
+// Utils
 #import "LDXImageUtils.h"
+#import "LDXUtils.h"
 
 // ViewControllers
 #import "LDXImagePickerController.h"
 #import "LDXAssetsViewController.h"
-
-static CGSize CGSizeScale(CGSize size, CGFloat scale) {
-    return CGSizeMake(size.width * scale, size.height * scale);
-}
 
 @interface LDXAlbumViewService() <PHPhotoLibraryChangeObserver>
 
