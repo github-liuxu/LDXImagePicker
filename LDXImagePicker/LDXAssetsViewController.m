@@ -508,7 +508,7 @@ static PHVideoRequestOptionsDeliveryMode videoDeliveryMode = PHVideoRequestOptio
                             complate(nil);
                         }
                     }
-                    [weakSelf dismissViewControllerAnimated:YES completion:NULL];
+                    [weakSelf.progress dismissViewControllerAnimated:YES completion:NULL];
                 });
             }];
         } else {
