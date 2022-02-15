@@ -409,7 +409,6 @@ static PHVideoRequestOptionsDeliveryMode videoDeliveryMode = PHVideoRequestOptio
 }
 
 - (BOOL)checkAssetInICloud:(PHAsset *)asset {
-    return YES;
     if(!asset)
         return NO;
     
