@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "LDXCheckmarkView.h"
+#import "LDXVideoIndicatorView.h"
 @import Photos;
-
-@class LDXVideoIndicatorView;
 
 @interface LDXAssetCell : UICollectionViewCell
 

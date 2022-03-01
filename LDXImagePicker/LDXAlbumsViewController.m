@@ -13,10 +13,6 @@
 #import "LDXAssetsViewController.h"
 #import "LDXAlbumViewService.h"
 
-@interface LDXImagePickerController (Private)
-@property (nonatomic, strong) NSBundle *assetBundle;
-@end
-
 @interface LDXAlbumsViewController ()
 
 @property (nonatomic, strong) IBOutlet UIBarButtonItem *doneButton;
@@ -42,7 +38,7 @@
     [super viewWillAppear:animated];
     
     // Configure navigation item
-    self.navigationItem.title = NSLocalizedStringFromTableInBundle(@"albums.title", @"LDXImagePicker", self.imagePickerController.assetBundle, nil);
+    self.navigationItem.title = NSLocalizedStringFromTableInBundle(@"albums.title", @"LDXImagePicker", [NSBundle bundleForClass:[self class]], nil);
     self.navigationItem.prompt = self.imagePickerController.prompt;
     
     // Show/hide 'Done' button
@@ -94,7 +90,7 @@
 - (void)updateSelectionInfo {
     NSMutableOrderedSet *selectedAssets = self.imagePickerController.selectedAssets;
     if (selectedAssets.count > 0) {
-        NSBundle *bundle = self.imagePickerController.assetBundle;
+        NSBundle *bundle = [NSBundle bundleForClass:[self class]];
         NSString *format;
         if (selectedAssets.count > 1) {
             format = NSLocalizedStringFromTableInBundle(@"assets.toolbar.items-selected", @"LDXImagePicker", bundle, nil);

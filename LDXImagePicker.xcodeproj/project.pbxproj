@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C3517FD27BD762C005B91AB /* LDXAssetService.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C3517FB27BD762C005B91AB /* LDXAssetService.h */; };
+		0C3517FE27BD762C005B91AB /* LDXAssetService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3517FC27BD762C005B91AB /* LDXAssetService.m */; };
+		0C35180127BD76EC005B91AB /* LDXAssetFetch.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C3517FF27BD76EC005B91AB /* LDXAssetFetch.h */; };
+		0C35180227BD76EC005B91AB /* LDXAssetFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C35180027BD76EC005B91AB /* LDXAssetFetch.m */; };
+		0C35180B27BD7E6D005B91AB /* LDXAssetDownloadGetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C35180927BD7E6D005B91AB /* LDXAssetDownloadGetter.h */; };
+		0C35180C27BD7E6D005B91AB /* LDXAssetDownloadGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C35180A27BD7E6D005B91AB /* LDXAssetDownloadGetter.m */; };
 		0C8F6B4A279EEEC9005F18FC /* LDXAlbumProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F6B48279EEEC9005F18FC /* LDXAlbumProgressViewController.m */; };
 		0C8F6B4B279EEEC9005F18FC /* LDXAlbumProgressViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C8F6B49279EEEC9005F18FC /* LDXAlbumProgressViewController.h */; };
 		0C8F6B4E279EF45C005F18FC /* LDXAlbumCircleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C8F6B4C279EF45C005F18FC /* LDXAlbumCircleView.h */; };
 		0C8F6B4F279EF45C005F18FC /* LDXAlbumCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F6B4D279EF45C005F18FC /* LDXAlbumCircleView.m */; };
-		0C8F6B52279F01DD005F18FC /* LDXAlbumToast.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C8F6B50279F01DD005F18FC /* LDXAlbumToast.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C8F6B52279F01DD005F18FC /* LDXAlbumToast.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C8F6B50279F01DD005F18FC /* LDXAlbumToast.h */; };
 		0C8F6B53279F01DD005F18FC /* LDXAlbumToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8F6B51279F01DD005F18FC /* LDXAlbumToast.m */; };
 		58B5DD9C27BA002F00503BA6 /* LDXAlbumViewService.h in Headers */ = {isa = PBXBuildFile; fileRef = 58B5DD9A27BA002F00503BA6 /* LDXAlbumViewService.h */; };
 		58B5DD9D27BA002F00503BA6 /* LDXAlbumViewService.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B5DD9B27BA002F00503BA6 /* LDXAlbumViewService.m */; };
@@ -79,6 +85,15 @@
 
 /* Begin PBXFileReference section */
 		07A50A481B331A840010E048 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LDXImagePicker.strings; sourceTree = "<group>"; };
+		0C3517F927BD7339005B91AB /* LDXAssetPresentProtocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDXAssetPresentProtocal.h; sourceTree = "<group>"; };
+		0C3517FB27BD762C005B91AB /* LDXAssetService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDXAssetService.h; sourceTree = "<group>"; };
+		0C3517FC27BD762C005B91AB /* LDXAssetService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LDXAssetService.m; sourceTree = "<group>"; };
+		0C3517FF27BD76EC005B91AB /* LDXAssetFetch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDXAssetFetch.h; sourceTree = "<group>"; };
+		0C35180027BD76EC005B91AB /* LDXAssetFetch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LDXAssetFetch.m; sourceTree = "<group>"; };
+		0C35180427BD7CDF005B91AB /* FetchResultProtocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FetchResultProtocal.h; sourceTree = "<group>"; };
+		0C35180827BD7DA8005B91AB /* AssetGetterProtocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetGetterProtocal.h; sourceTree = "<group>"; };
+		0C35180927BD7E6D005B91AB /* LDXAssetDownloadGetter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDXAssetDownloadGetter.h; sourceTree = "<group>"; };
+		0C35180A27BD7E6D005B91AB /* LDXAssetDownloadGetter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LDXAssetDownloadGetter.m; sourceTree = "<group>"; };
 		0C3D40FC27A051FC0082805D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C8F6B48279EEEC9005F18FC /* LDXAlbumProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDXAlbumProgressViewController.m; sourceTree = "<group>"; };
 		0C8F6B49279EEEC9005F18FC /* LDXAlbumProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDXAlbumProgressViewController.h; sourceTree = "<group>"; };
@@ -163,6 +178,22 @@
 				7F915211AC1EB122204F919F /* Pods_LDXImagePickerDemo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0C35180327BD7CCB005B91AB /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				0C3517F927BD7339005B91AB /* LDXAssetPresentProtocal.h */,
+				0C35180427BD7CDF005B91AB /* FetchResultProtocal.h */,
+				0C35180827BD7DA8005B91AB /* AssetGetterProtocal.h */,
+				0C35180927BD7E6D005B91AB /* LDXAssetDownloadGetter.h */,
+				0C35180A27BD7E6D005B91AB /* LDXAssetDownloadGetter.m */,
+				0C3517FB27BD762C005B91AB /* LDXAssetService.h */,
+				0C3517FC27BD762C005B91AB /* LDXAssetService.m */,
+				0C3517FF27BD76EC005B91AB /* LDXAssetFetch.h */,
+				0C35180027BD76EC005B91AB /* LDXAssetFetch.m */,
+			);
+			path = Asset;
 			sourceTree = "<group>";
 		};
 		58B5DD9927B9FFDB00503BA6 /* Services */ = {
@@ -255,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				AAA8FE081ACDA079002A9710 /* LDXImagePicker.h */,
+				0C35180327BD7CCB005B91AB /* Asset */,
 				58B5DDA727BA133100503BA6 /* Fetch */,
 				58B5DDA627BA132000503BA6 /* Utils */,
 				58B5DD9927B9FFDB00503BA6 /* Services */,
@@ -328,7 +360,9 @@
 				58B5DD9C27BA002F00503BA6 /* LDXAlbumViewService.h in Headers */,
 				0C8F6B52279F01DD005F18FC /* LDXAlbumToast.h in Headers */,
 				AAF1CA331ACE6FB5005F6295 /* LDXAssetCell.h in Headers */,
+				0C35180B27BD7E6D005B91AB /* LDXAssetDownloadGetter.h in Headers */,
 				0C8F6B4E279EF45C005F18FC /* LDXAlbumCircleView.h in Headers */,
+				0C35180127BD76EC005B91AB /* LDXAssetFetch.h in Headers */,
 				58B5DDA027BA107C00503BA6 /* LDXImageUtils.h in Headers */,
 				58B5DDAA27BA466D00503BA6 /* LDXUtils.h in Headers */,
 				AAF1CA2F1ACE6E46005F6295 /* LDXAssetsViewController.h in Headers */,
@@ -336,6 +370,7 @@
 				AAF1CA1A1ACE5467005F6295 /* LDXAlbumCell.h in Headers */,
 				AAA8FE5B1ACDA554002A9710 /* LDXAlbumsViewController.h in Headers */,
 				AA3AD06F1ACF9A3A00BF523E /* LDXVideoIconView.h in Headers */,
+				0C3517FD27BD762C005B91AB /* LDXAssetService.h in Headers */,
 				AAA8FE091ACDA079002A9710 /* LDXImagePicker.h in Headers */,
 				AABBF0901ACEDDFF003188A3 /* LDXCheckmarkView.h in Headers */,
 				0C8F6B4B279EEEC9005F18FC /* LDXAlbumProgressViewController.h in Headers */,
@@ -457,9 +492,12 @@
 			files = (
 				58B5DDA127BA107C00503BA6 /* LDXImageUtils.m in Sources */,
 				58B5DDA527BA114000503BA6 /* LDXAlbumFetch.m in Sources */,
+				0C35180C27BD7E6D005B91AB /* LDXAssetDownloadGetter.m in Sources */,
 				AAF1CA341ACE6FB5005F6295 /* LDXAssetCell.m in Sources */,
+				0C3517FE27BD762C005B91AB /* LDXAssetService.m in Sources */,
 				AA3AD0701ACF9A3A00BF523E /* LDXVideoIconView.m in Sources */,
 				58B5DD9D27BA002F00503BA6 /* LDXAlbumViewService.m in Sources */,
+				0C35180227BD76EC005B91AB /* LDXAssetFetch.m in Sources */,
 				790A85101AE7D4D9008E2A80 /* LDXSlomoIconView.m in Sources */,
 				AABBF0911ACEDDFF003188A3 /* LDXCheckmarkView.m in Sources */,
 				AAF1CA301ACE6E46005F6295 /* LDXAssetsViewController.m in Sources */,

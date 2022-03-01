@@ -245,10 +245,6 @@
                                 <constraint firstAttribute="right" secondItem="m2s-7T-bnL" secondAttribute="right" id="lng-sP-3aa"/>
                             </constraints>
                         </collectionReusableView>
-                        <connections>
-                            <outlet property="dataSource" destination="QiH-NZ-ZGN" id="PlE-FW-LqS"/>
-                            <outlet property="delegate" destination="QiH-NZ-ZGN" id="0SZ-eY-tkn"/>
-                        </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Album Title" id="wKf-eb-U1x">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="nai-ZV-lR8">

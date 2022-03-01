@@ -16,34 +16,31 @@
 
 @property (nonatomic, strong) UINavigationController *albumsNavigationController;
 
-@property (nonatomic, strong) NSBundle *assetBundle;
-
 @end
 
 @implementation LDXImagePickerController
 
+- (instancetype)init {
+    if (self = [super init]) {
+        // Set default values
+        self.assetCollectionSubtypes = @[
+                                         @(PHAssetCollectionSubtypeSmartAlbumUserLibrary),
+                                         @(PHAssetCollectionSubtypeAlbumMyPhotoStream),
+                                         @(PHAssetCollectionSubtypeSmartAlbumPanoramas),
+                                         @(PHAssetCollectionSubtypeSmartAlbumVideos),
+                                         @(PHAssetCollectionSubtypeSmartAlbumBursts)
+                                         ];
+        self.minimumNumberOfSelection = 1;
+        self.numberOfColumnsInPortrait = 4;
+        self.numberOfColumnsInLandscape = 7;
+        
+        _selectedAssets = [NSMutableOrderedSet orderedSet];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Set default values
-    self.assetCollectionSubtypes = @[
-                                     @(PHAssetCollectionSubtypeSmartAlbumUserLibrary),
-                                     @(PHAssetCollectionSubtypeAlbumMyPhotoStream),
-                                     @(PHAssetCollectionSubtypeSmartAlbumPanoramas),
-                                     @(PHAssetCollectionSubtypeSmartAlbumVideos),
-                                     @(PHAssetCollectionSubtypeSmartAlbumBursts)
-                                     ];
-    self.minimumNumberOfSelection = 1;
-    self.numberOfColumnsInPortrait = 4;
-    self.numberOfColumnsInLandscape = 7;
-    
-    _selectedAssets = [NSMutableOrderedSet orderedSet];
-    
-    // Get asset bundle
-    self.assetBundle = [NSBundle bundleForClass:[self class]];
-    NSString *bundlePath = [self.assetBundle pathForResource:@"LDXImagePicker" ofType:@"bundle"];
-    if (bundlePath) {
-        self.assetBundle = [NSBundle bundleWithPath:bundlePath];
-    }
     
     if ([PHPhotoLibrary authorizationStatus] == PHAuthorizationStatusAuthorized) {
         [self setUp];
@@ -85,7 +82,7 @@
 - (void)setUpAlbumsViewController
 {
     // Add LDXAlbumsViewController as a child
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LDXImagePicker" bundle:self.assetBundle];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LDXImagePicker" bundle:[NSBundle bundleForClass:[self class]]];
     UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"LDXAlbumsNavigationController"];
     
     [self addChildViewController:navigationController];
