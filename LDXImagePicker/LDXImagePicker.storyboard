@@ -93,6 +93,9 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="QL5-wR-LYt" id="hiF-es-Sw6"/>
+                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Photos" id="r7D-Kp-3yC">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="s1M-VA-CeM">

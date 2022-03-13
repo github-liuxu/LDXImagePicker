@@ -205,42 +205,4 @@
             && self.imagePickerController.maximumNumberOfSelection >= self.imagePickerController.minimumNumberOfSelection);
 }
 
-- (void)SelectItemAtIndex:(LDXImagePickerController *)imagePickerController selectedAssets:(NSMutableOrderedSet *)selectedAssets asset:(PHAsset *)asset indexPath:(NSIndexPath *)indexPath {
-    if (imagePickerController.allowsMultipleSelection) {
-        if ([self isAutoDeselectEnabled] && selectedAssets.count > 0) {
-            // Remove previous selected asset from set
-            [selectedAssets removeObjectAtIndex:0];
-            [self reloadVisibleIndex];
-            // Deselect previous selected asset
-            if (self.lastSelectedItemIndexPath) {
-                [self.collectionView deselectItemAtIndexPath:self.lastSelectedItemIndexPath animated:NO];
-            }
-        }
-        
-        // Add asset to set
-        [selectedAssets addObject:asset];
-        [self reloadVisibleIndex];
-        self.lastSelectedItemIndexPath = indexPath;
-        
-        [self updateDoneButtonState];
-        
-        if (imagePickerController.showsNumberOfSelectedAssets) {
-            [self updateSelectionInfo];
-            
-            if (selectedAssets.count == 1) {
-                // Show toolbar
-                [self.navigationController setToolbarHidden:NO animated:YES];
-            }
-        }
-    } else {
-        if ([imagePickerController.delegate respondsToSelector:@selector(ldx_imagePickerController:didFinishPickingAssets:)]) {
-            [imagePickerController.delegate ldx_imagePickerController:imagePickerController didFinishPickingAssets:@[asset]];
-        }
-    }
-    
-    if ([imagePickerController.delegate respondsToSelector:@selector(ldx_imagePickerController:didSelectAsset:)]) {
-        [imagePickerController.delegate ldx_imagePickerController:imagePickerController didSelectAsset:asset];
-    }
-}
-
 @end

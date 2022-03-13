@@ -8,20 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Photos/Photos.h>
-
-@class LDXImagePickerController;
-
-@protocol LDXImagePickerControllerDelegate <NSObject>
-
-@optional
-- (void)ldx_imagePickerController:(LDXImagePickerController *)imagePickerController didFinishPickingAssets:(NSArray *)assets;
-- (void)ldx_imagePickerControllerDidCancel:(LDXImagePickerController *)imagePickerController;
-
-- (BOOL)ldx_imagePickerController:(LDXImagePickerController *)imagePickerController shouldSelectAsset:(PHAsset *)asset;
-- (void)ldx_imagePickerController:(LDXImagePickerController *)imagePickerController didSelectAsset:(PHAsset *)asset;
-- (void)ldx_imagePickerController:(LDXImagePickerController *)imagePickerController didDeselectAsset:(PHAsset *)asset;
-
-@end
+#import "LDXImagePickerControllerProtocol.h"
 
 typedef NS_ENUM(NSUInteger, LDXImagePickerMediaType) {
     LDXImagePickerMediaTypeAny = 0,
@@ -39,7 +26,7 @@ typedef NS_ENUM(NSUInteger, LDXImagePickerMediaType) {
 @property (nonatomic, copy) NSString *prompt;
 @property (nonatomic, assign) BOOL showsNumberOfSelectedAssets;
 @property (nonatomic, strong) NSMutableOrderedSet *selectedAssets;
-@property (nonatomic, copy) NSArray *assetCollectionSubtypes;
+@property (nonatomic, strong) NSMutableArray *assetCollectionSubtypes;
 @property (nonatomic, assign) NSUInteger numberOfColumnsInPortrait;
 @property (nonatomic, assign) NSUInteger numberOfColumnsInLandscape;
 

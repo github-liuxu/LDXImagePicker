@@ -28,8 +28,21 @@
                                          @(PHAssetCollectionSubtypeAlbumMyPhotoStream),
                                          @(PHAssetCollectionSubtypeSmartAlbumPanoramas),
                                          @(PHAssetCollectionSubtypeSmartAlbumVideos),
-                                         @(PHAssetCollectionSubtypeSmartAlbumBursts)
-                                         ];
+                                         @(PHAssetCollectionSubtypeSmartAlbumSlomoVideos)
+                                         ].mutableCopy;
+        if (@available(iOS 9.0, *)) {
+            [self.assetCollectionSubtypes addObject:@(PHAssetCollectionSubtypeSmartAlbumSelfPortraits)];
+            [self.assetCollectionSubtypes addObject:@(PHAssetCollectionSubtypeSmartAlbumScreenshots)];
+        }
+        
+        if (@available(iOS 10.3, *)) {
+            [self.assetCollectionSubtypes addObject:@(PHAssetCollectionSubtypeSmartAlbumLivePhotos)];
+        }
+        
+        if (@available(iOS 15.0, *)) {
+            [self.assetCollectionSubtypes addObject:@(PHAssetCollectionSubtypeSmartAlbumRAW)];
+        }
+        
         self.minimumNumberOfSelection = 1;
         self.numberOfColumnsInPortrait = 4;
         self.numberOfColumnsInLandscape = 7;

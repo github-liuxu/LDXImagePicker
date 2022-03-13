@@ -11,13 +11,16 @@
 // ViewControllers
 #import "LDXImagePickerController.h"
 #import "LDXAssetsViewController.h"
-#import "LDXAlbumViewService.h"
+#import "LDXAlbumService.h"
+#import "LDXAlbumCell.h"
+#import "LDXUtils.h"
+#import "LDXImageUtils.h"
 
-@interface LDXAlbumsViewController ()
+@interface LDXAlbumsViewController () <UITableViewDataSource, LDXViewUpdateProtocol>
 
 @property (nonatomic, strong) IBOutlet UIBarButtonItem *doneButton;
 @property (nonatomic, copy) NSArray *assetCollections;
-@property (nonatomic, strong) LDXAlbumViewService *albumService;
+@property (nonatomic, strong) LDXAlbumService *albumService;
 
 @end
 
@@ -25,11 +28,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.albumService = [[LDXAlbumViewService alloc] initWithView:self.tableView];
-    LDXAlbumFetch *albumFetch = [[LDXAlbumFetch alloc] initWithSubtypes:self.imagePickerController.assetCollectionSubtypes];
-    self.assetCollections = [self.albumService fetchAlbum:albumFetch withMediaType:self.imagePickerController.mediaType];
-    self.tableView.dataSource = self.albumService;
-    self.tableView.delegate = self.albumService;
+    self.albumService = [[LDXAlbumService alloc] init];
+    [self.albumService fetchMediaType:LDXImagePickerMediaTypeAny collectionSubtypes:self.imagePickerController.assetCollectionSubtypes];
     [self setUpToolbarItems];
 }
 
@@ -56,7 +56,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     LDXAssetsViewController *assetsViewController = segue.destinationViewController;
     assetsViewController.imagePickerController = self.imagePickerController;
-    assetsViewController.assetCollection = self.assetCollections[self.tableView.indexPathForSelectedRow.row];
+    assetsViewController.assetCollection = [self.albumService albumFetch].assetCollections[self.tableView.indexPathForSelectedRow.row];
+    
 }
 
 #pragma mark - Actions
@@ -122,5 +123,31 @@
 - (void)updateControlState {
     self.doneButton.enabled = [self isMinimumSelectionLimitFulfilled];
 }
+
+- (void)updateView {
+    [self.tableView reloadData];
+}
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.albumService collectionCount];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    LDXAlbumCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AlbumCell" forIndexPath:indexPath];
+    cell.tag = indexPath.row;
+    cell.borderWidth = 1.0 / [[UIScreen mainScreen] scale];
+    // Thumbnail
+    CGSize size1 = CGSizeScale(cell.imageView3.frame.size, [[UIScreen mainScreen] scale]);
+    CGSize size2 = CGSizeScale(cell.imageView2.frame.size, [[UIScreen mainScreen] scale]);
+    CGSize size3 = CGSizeScale(cell.imageView1.frame.size, [[UIScreen mainScreen] scale]);
+    NSArray *sizes = @[[NSValue valueWithCGSize:size1],[NSValue valueWithCGSize:size2],[NSValue valueWithCGSize:size3]];
+    [self.albumService requestCollectionThumbnail:indexPath.row targetSizes:sizes info:^(NSString * _Nonnull title, NSUInteger assetCount) {
+        [cell setTitle:title assetCount:assetCount];
+    } imageBlock1:cell.image1 imageBlock2:cell.image2 imageBlock3:cell.image3];
+    
+    return cell;
+}
+
 
 @end

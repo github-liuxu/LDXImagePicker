@@ -7,21 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LDXImagePickerControllerProtocol.h"
+#import <Photos/Photos.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol LDXAlbumFetchDelegate <NSObject>
-@required
-- (instancetype)initWithSubtypes:(NSArray /*<PHAssetCollectionSubtype>*/*)subtypes;
-- (NSMutableArray *)getAssetCollections;
-- (NSArray *)fetchResults;
-@end
+@interface LDXAlbumFetch : NSObject
 
-@interface LDXAlbumFetch : NSObject <LDXAlbumFetchDelegate>
-
-- (instancetype)initWithSubtypes:(NSArray /*<PHAssetCollectionSubtype>*/*)subtypes;
-- (NSMutableArray *)getAssetCollections;
-- (NSArray *)fetchResults;
+- (void)fetchAlbumAndDidChange:(void(^)(void))block;
+@property (nonatomic, strong) NSArray *subTypes;
+@property (nonatomic, strong, readonly) NSMutableArray <PHAssetCollection*>* assetCollections;
+- (PHFetchResult<PHAsset *> *)fetchAssetsInAssetCollection:(PHAssetCollection *)assetCollection;
++ (void)requestAsset:(PHAsset *)asset targetSize:(CGSize)size complate:(void(^)(UIImage *image))block;
 
 @end
 

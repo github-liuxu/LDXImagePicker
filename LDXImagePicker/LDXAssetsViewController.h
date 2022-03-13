@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LDXAlbumFetch.h"
 
 @class LDXImagePickerController;
 @class PHAssetCollection;
@@ -15,5 +16,6 @@
 
 @property (nonatomic, weak) LDXImagePickerController *imagePickerController;
 @property (nonatomic, strong) PHAssetCollection *assetCollection;
+@property (nonatomic, strong) LDXAlbumFetch *albumFetch;
 
 @end
