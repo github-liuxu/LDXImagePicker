@@ -16,6 +16,5 @@
 
 @property (nonatomic, weak) LDXImagePickerController *imagePickerController;
 @property (nonatomic, strong) PHAssetCollection *assetCollection;
-@property (nonatomic, strong) LDXAlbumFetch *albumFetch;
 
 @end

@@ -1,13 +1,13 @@
 //
-//  LDXAssetDownloadGetter.m
+//  LDXAssetDownload.m
 //  LDXImagePicker
 //
 //  Created by 刘东旭 on 2022/2/17.
 //  Copyright © 2022 LDX. All rights reserved.
 //
 
-#import "LDXAssetDownloadGetter.h"
-#import "FetchResultProtocal.h"
+#import "LDXAssetDownload.h"
+#import <Photos/Photos.h>
 
 //image option
 static PHImageRequestOptionsVersion imageVersion = PHImageRequestOptionsVersionCurrent;
@@ -16,13 +16,13 @@ static PHImageRequestOptionsDeliveryMode imageDeliveryMode = PHImageRequestOptio
 static PHVideoRequestOptionsVersion videoVersion = PHVideoRequestOptionsVersionCurrent;
 static PHVideoRequestOptionsDeliveryMode videoDeliveryMode = PHVideoRequestOptionsDeliveryModeHighQualityFormat;
 
-@interface LDXAssetDownloadGetter ()
+@interface LDXAssetDownload ()
 
 @property (nonatomic, assign) PHImageRequestID requestId;
 
 @end
 
-@implementation LDXAssetDownloadGetter
+@implementation LDXAssetDownload
 
 - (BOOL)assetIsInICloud:(PHAsset*)asset {
     if(!asset || asset == nil)

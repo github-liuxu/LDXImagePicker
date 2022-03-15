@@ -29,7 +29,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.albumService = [[LDXAlbumService alloc] init];
-    [self.albumService fetchMediaType:LDXImagePickerMediaTypeAny collectionSubtypes:self.imagePickerController.assetCollectionSubtypes];
+    self.albumService.mediaType = LDXImagePickerMediaTypeAny;
+    [self.albumService fetchCollectionSubtypes:self.imagePickerController.assetCollectionSubtypes];
     [self setUpToolbarItems];
 }
 

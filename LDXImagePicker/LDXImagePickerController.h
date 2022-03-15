@@ -8,7 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import <Photos/Photos.h>
-#import "LDXImagePickerControllerProtocol.h"
+@class LDXImagePickerController;
+
+@protocol LDXImagePickerControllerDelegate <NSObject>
+
+@optional
+- (void)ldx_imagePickerController:(LDXImagePickerController *)imagePickerController didFinishPickingAssets:(NSArray *)assets;
+- (void)ldx_imagePickerControllerDidCancel:(LDXImagePickerController *)imagePickerController;
+
+- (BOOL)ldx_imagePickerController:(LDXImagePickerController *)imagePickerController shouldSelectAsset:(PHAsset *)asset;
+- (void)ldx_imagePickerController:(LDXImagePickerController *)imagePickerController didSelectAsset:(PHAsset *)asset;
+- (void)ldx_imagePickerController:(LDXImagePickerController *)imagePickerController didDeselectAsset:(PHAsset *)asset;
+
+@end
 
 typedef NS_ENUM(NSUInteger, LDXImagePickerMediaType) {
     LDXImagePickerMediaTypeAny = 0,

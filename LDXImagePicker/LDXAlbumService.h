@@ -22,9 +22,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef void(^ImageBlock)(UIImage *image);
 
+@property (nonatomic, assign) LDXImagePickerMediaType mediaType;
 @property (nonatomic, weak) id<LDXViewUpdateProtocol> delegate;
 @property (nonatomic, strong, readonly) LDXAlbumFetch *albumFetch;
-- (void)fetchMediaType:(LDXImagePickerMediaType)mediaType collectionSubtypes:(NSArray *)subType;
+- (void)fetchCollectionSubtypes:(NSArray *)subType;
 
 - (NSUInteger)collectionCount;
 - (void)requestCollectionThumbnail:(NSUInteger)index targetSizes:(NSArray *)sizes info:(void(^)(NSString *title, NSUInteger assetCount))block imageBlock1:(ImageBlock)image1 imageBlock2:(ImageBlock)image2 imageBlock3:(ImageBlock)image3;

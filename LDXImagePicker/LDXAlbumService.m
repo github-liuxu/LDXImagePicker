@@ -11,8 +11,6 @@
 
 @interface LDXAlbumService()
 
-@property (nonatomic, assign) LDXImagePickerMediaType mediaType;
-@property (nonatomic, strong) NSArray *subType;
 @property (nonatomic, strong) LDXAlbumFetch *albumFetch;
 
 @end
@@ -27,11 +25,9 @@
     return self;
 }
 
-- (void)fetchMediaType:(LDXImagePickerMediaType)mediaType collectionSubtypes:(NSArray *)subType {
-    self.mediaType = mediaType;
-    self.subType = subType;
+- (void)fetchCollectionSubtypes:(NSArray *)subType {
     __weak typeof(self)weakSelf = self;
-    self.albumFetch.subTypes = self.subType;
+    self.albumFetch.subTypes = subType;
     [self.albumFetch fetchAlbumAndDidChange:^{
         if ([weakSelf.delegate respondsToSelector:@selector(updateView)]) {
             [weakSelf.delegate updateView];
@@ -45,7 +41,7 @@
 
 - (void)requestCollectionThumbnail:(NSUInteger)index targetSizes:(NSArray *)sizes info:(void(^)(NSString *title, NSUInteger assetCount))block imageBlock1:(ImageBlock)image1 imageBlock2:(ImageBlock)image2 imageBlock3:(ImageBlock)image3 {
     PHAssetCollection* assetCollection = [[self.albumFetch assetCollections] objectAtIndex:index];
-    PHFetchResult<PHAsset *> *fetchResult = [self.albumFetch fetchAssetsInAssetCollection:assetCollection];
+    PHFetchResult<PHAsset *> *fetchResult = [self.albumFetch fetchAssetsMediaType:LDXImagePickerMediaTypeAny  inAssetCollection:assetCollection];
     NSString *title = assetCollection.localizedTitle;
     NSUInteger count = fetchResult.count;
     block(title, count);

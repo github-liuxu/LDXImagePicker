@@ -75,8 +75,19 @@
     return self.assetCollections;
 }
 
-- (PHFetchResult<PHAsset *> *)fetchAssetsInAssetCollection:(PHAssetCollection *)assetCollection {
-    return [PHAsset fetchAssetsInAssetCollection:assetCollection options:nil];
+- (PHFetchResult<PHAsset *> *)fetchAssetsMediaType:(LDXImagePickerMediaType)mediaType inAssetCollection:(PHAssetCollection *)assetCollection {
+    PHFetchOptions *options = [PHFetchOptions new];
+    switch (mediaType) {
+        case PHAssetMediaTypeImage:
+            options.predicate = [NSPredicate predicateWithFormat:@"mediaType == %ld", PHAssetMediaTypeImage];
+            break;
+        case PHAssetMediaTypeVideo:
+            options.predicate = [NSPredicate predicateWithFormat:@"mediaType == %ld", PHAssetMediaTypeVideo];
+            break;
+        default:
+            break;
+    }
+    return [PHAsset fetchAssetsInAssetCollection:assetCollection options:options];
 }
 
 + (void)requestAsset:(PHAsset *)asset targetSize:(CGSize)size complate:(void(^)(UIImage *image))block {
