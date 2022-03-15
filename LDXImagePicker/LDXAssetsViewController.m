@@ -46,7 +46,7 @@
 
 @end
 
-@interface LDXAssetsViewController () <LDXAssetGetterDelegate>
+@interface LDXAssetsViewController () <LDXAssetDownloadDelegate>
 
 @property (nonatomic, strong) IBOutlet UIBarButtonItem *doneButton;
 
@@ -60,7 +60,7 @@
 
 @property (nonatomic, weak) LDXAlbumProgressViewController *progressVC;
 
-@property (nonatomic, strong) LDXAssetDownload *assetGetter;
+@property (nonatomic, strong) LDXAssetDownload *assetDownload;
 
 @end
 
@@ -70,8 +70,8 @@
     [super viewDidLoad];
     [self setUpToolbarItems];
     self.imageManager = [PHCachingImageManager new];
-    self.assetGetter = [[LDXAssetDownload alloc] init];
-    self.assetGetter.delegate = self;
+    self.assetDownload = [[LDXAssetDownload alloc] init];
+    self.assetDownload.delegate = self;
     
     [self resetCachedAssets];
     
@@ -210,21 +210,21 @@
     }
 }
 
-#pragma mark - PresenterDelegate
-- (void)hiddenProgress {
-    [self dismissViewControllerAnimated:YES completion:NULL];
-}
-
 - (void)selectChanged:(NSUInteger)count {
     [self updateSelectionInfo];
     [self updateDoneButtonState];
+}
+
+#pragma mark - PresenterDelegate
+- (void)endDownload {
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (void)setProgress:(float)progress {
     self.progressVC.progress = progress;
 }
 
-- (void)showProgress {
+- (void)beginDownload {
     //资源在iCloud上
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Asset in iCloud"
                                                                              message:@"Download?"
@@ -239,7 +239,7 @@
         LDXAlbumProgressViewController *progressVC = [LDXAlbumProgressViewController new];
         weakSelf.progressVC = progressVC;
         [weakSelf.progressVC setCancelBlock:^{
-            [weakSelf.assetGetter cancel];
+            [weakSelf.assetDownload cancel];
         }];
         
         weakSelf.definesPresentationContext = YES;
@@ -461,7 +461,7 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     PHAsset *asset = self.fetchResult[indexPath.row];
     __weak typeof(self)weakSelf = self;
-    [self.assetGetter getResult:asset complate:^(PHAsset *asset, NSDictionary *info) {
+    [self.assetDownload download:asset complate:^(PHAsset *asset, NSDictionary *info) {
         if (asset) {
             if (weakSelf.imagePickerController.allowsMultipleSelection) {
                 [weakSelf.imagePickerController.selectedAssets addObject:weakSelf.fetchResult[indexPath.row]];

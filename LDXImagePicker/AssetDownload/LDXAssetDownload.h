@@ -11,18 +11,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol LDXAssetGetterDelegate <NSObject>
+@protocol LDXAssetDownloadDelegate <NSObject>
 
-- (void)showProgress;
-- (void)hiddenProgress;
+- (void)beginDownload;
 - (void)setProgress:(float)progress;
+- (void)endDownload;
 
 @end
 
 @interface LDXAssetDownload : NSObject
 
-@property (nonatomic, weak) id<LDXAssetGetterDelegate> delegate;
-- (void)getResult:(PHAsset*)asset complate:(void(^)(PHAsset* asset,NSDictionary *info))block;
+@property (nonatomic, weak) id<LDXAssetDownloadDelegate> delegate;
+- (void)download:(PHAsset*)asset complate:(void(^)(PHAsset* asset,NSDictionary *info))block;
 - (void)cancel;
 
 @end

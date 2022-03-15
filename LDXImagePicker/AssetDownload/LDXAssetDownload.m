@@ -65,9 +65,9 @@ static PHVideoRequestOptionsDeliveryMode videoDeliveryMode = PHVideoRequestOptio
     return false;
 }
 
-- (void)getResult:(PHAsset*)asset complate:(void(^)(PHAsset* asset,NSDictionary *info))block {
+- (void)download:(PHAsset*)asset complate:(void(^)(PHAsset* asset,NSDictionary *info))block {
     if ([self assetIsInICloud:asset]) {
-        [self.delegate showProgress];
+        [self.delegate beginDownload];
         __weak typeof(self)weakSelf = self;
         if (asset.mediaType == PHAssetMediaTypeVideo) {
             PHVideoRequestOptions *option = [[PHVideoRequestOptions alloc]init];
@@ -89,7 +89,7 @@ static PHVideoRequestOptionsDeliveryMode videoDeliveryMode = PHVideoRequestOptio
                         }
                         block(nil,info);
                     }
-                    [weakSelf.delegate hiddenProgress];
+                    [weakSelf.delegate endDownload];
                 });
             }];
         } else {
@@ -108,13 +108,13 @@ static PHVideoRequestOptionsDeliveryMode videoDeliveryMode = PHVideoRequestOptio
                 dispatch_async(dispatch_get_main_queue(), ^{
                     if (imageData) {
                         block(asset,info);
-                        [weakSelf.delegate hiddenProgress];
+                        [weakSelf.delegate endDownload];
                     } else {
                         if (![info[PHImageCancelledKey] boolValue]) {//如果不是取消
                         }
                         block(nil,info);
                     }
-                    [weakSelf.delegate hiddenProgress];
+                    [weakSelf.delegate endDownload];
                 });
             }];
         }
@@ -125,7 +125,7 @@ static PHVideoRequestOptionsDeliveryMode videoDeliveryMode = PHVideoRequestOptio
 
 - (void)cancel {
     [[PHImageManager defaultManager] cancelImageRequest:self.requestId];
-    [self.delegate hiddenProgress];
+    [self.delegate endDownload];
 }
 
 @end
