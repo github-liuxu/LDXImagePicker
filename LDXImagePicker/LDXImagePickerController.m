@@ -54,6 +54,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Set default values
+    self.assetCollectionSubtypes = @[
+                                     @(PHAssetCollectionSubtypeSmartAlbumUserLibrary),
+                                     @(PHAssetCollectionSubtypeAlbumMyPhotoStream),
+                                     @(PHAssetCollectionSubtypeSmartAlbumPanoramas),
+                                     @(PHAssetCollectionSubtypeSmartAlbumVideos),
+                                     @(PHAssetCollectionSubtypeSmartAlbumBursts)
+                                     ];
+    self.minimumNumberOfSelection = self.minimumNumberOfSelection?:1;
+    self.numberOfColumnsInPortrait = self.numberOfColumnsInPortrait?:4;
+    self.numberOfColumnsInLandscape = self.numberOfColumnsInLandscape?:7;
+    
+    _selectedAssets = [NSMutableOrderedSet orderedSet];
     
     if ([PHPhotoLibrary authorizationStatus] == PHAuthorizationStatusAuthorized) {
         [self setUp];
