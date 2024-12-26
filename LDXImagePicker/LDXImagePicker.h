@@ -15,4 +15,9 @@ FOUNDATION_EXPORT double LDXImagePickerVersionNumber;
 FOUNDATION_EXPORT const unsigned char LDXImagePickerVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <LDXImagePicker/PublicHeader.h>
+#if __has_include(<LDXImagePickerController.h>)
+#import <LDXImagePickerController.h>
+#else
 #import <LDXImagePicker/LDXImagePickerController.h>
+#endif
+

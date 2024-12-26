@@ -8,6 +8,7 @@
 
 #import "LDXAlbumProgressViewController.h"
 #import "LDXAlbumCircleView.h"
+#import "NvBundleUtils.h"
 
 #define SCREENWIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height
@@ -38,7 +39,7 @@
     self.circleView.center = self.view.center;
     self.cancelBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.circleView.center.x-20, self.circleView.frame.origin.y + self.circleView.frame.size.height + 15, 40, 40)];
     self.cancelBtn.hidden = NO;
-    [self.cancelBtn setImage:[UIImage imageNamed:@"CancelCompile" inBundle:[NSBundle bundleForClass:self.class] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+    [self.cancelBtn setImage:[UIImage imageNamed:@"CancelCompile" inBundle:[NvBundleUtils getResourceBundle] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
     [self.view addSubview:self.cancelBtn];
     [self.cancelBtn addTarget:self action:@selector(cancelBtnClicked) forControlEvents:(UIControlEventTouchUpInside)];
 }

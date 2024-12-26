@@ -1,0 +1,5 @@
+module LDXImagePicker {
+     umbrella header "LDXImagePicker.h"
+     export *
+     module * { export * }
+ }

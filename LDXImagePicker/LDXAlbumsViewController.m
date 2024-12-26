@@ -15,6 +15,7 @@
 #import "LDXAlbumCell.h"
 #import "LDXUtils.h"
 #import "LDXImageUtils.h"
+#import "NvBundleUtils.h"
 
 @interface LDXAlbumsViewController () <UITableViewDataSource, LDXViewUpdateProtocol>
 
@@ -39,7 +40,8 @@
     [super viewWillAppear:animated];
     
     // Configure navigation item
-    self.navigationItem.title = NSLocalizedStringFromTableInBundle(@"albums.title", @"LDXImagePicker", [NSBundle bundleForClass:[self class]], nil);
+    NSBundle *bundle = [NvBundleUtils getResourceBundle];
+    self.navigationItem.title = NSLocalizedStringFromTableInBundle(@"albums.title", @"LDXImagePicker", bundle, nil);
     self.navigationItem.prompt = self.imagePickerController.prompt;
     
     // Show/hide 'Done' button
@@ -92,7 +94,7 @@
 - (void)updateSelectionInfo {
     NSMutableOrderedSet *selectedAssets = self.imagePickerController.selectedAssets;
     if (selectedAssets.count > 0) {
-        NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+        NSBundle *bundle = [NvBundleUtils getResourceBundle];
         NSString *format;
         if (selectedAssets.count > 1) {
             format = NSLocalizedStringFromTableInBundle(@"assets.toolbar.items-selected", @"LDXImagePicker", bundle, nil);

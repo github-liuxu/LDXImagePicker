@@ -11,6 +11,7 @@
 
 // ViewControllers
 #import "LDXAlbumsViewController.h"
+#import "NvBundleUtils.h"
 
 @interface LDXImagePickerController ()
 
@@ -108,7 +109,8 @@
 - (void)setUpAlbumsViewController
 {
     // Add LDXAlbumsViewController as a child
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LDXImagePicker" bundle:[NSBundle bundleForClass:[self class]]];
+    NSBundle *bundle = [NvBundleUtils getResourceBundle];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LDXImagePicker" bundle:bundle];
     UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"LDXAlbumsNavigationController"];
     
     [self addChildViewController:navigationController];

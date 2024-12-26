@@ -17,6 +17,7 @@
 #import "LDXAlbumToast.h"
 #import "LDXUtils.h"
 #import "LDXAssetDownload.h"
+#import "NvBundleUtils.h"
 
 @implementation NSIndexSet (Convenience)
 
@@ -195,7 +196,14 @@
 - (void)updateSelectionInfo {
     NSMutableOrderedSet *selectedAssets = self.imagePickerController.selectedAssets;
     if (selectedAssets.count > 0) {
-        NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"LDXImagePicker_LDXImagePicker" ofType:@"bundle"];
+        NSFileManager *fm = [NSFileManager defaultManager];
+        NSBundle *bundle = [NSBundle mainBundle];
+        if ([fm fileExistsAtPath:path]) {
+            bundle = [NSBundle bundleWithPath:path];
+        } else {
+            bundle = [NSBundle bundleForClass:[self class]];
+        }
         NSString *format;
         if (selectedAssets.count > 1) {
             format = NSLocalizedStringFromTableInBundle(@"assets.toolbar.items-selected", @"LDXImagePicker", bundle, nil);
@@ -503,7 +511,7 @@
         
         // Number of assets
         UILabel *label = (UILabel *)[footerView viewWithTag:1];
-        NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+        NSBundle *bundle = [NvBundleUtils getResourceBundle];
         NSUInteger numberOfPhotos = [self.fetchResult countOfAssetsWithMediaType:PHAssetMediaTypeImage];
         NSUInteger numberOfVideos = [self.fetchResult countOfAssetsWithMediaType:PHAssetMediaTypeVideo];
         
