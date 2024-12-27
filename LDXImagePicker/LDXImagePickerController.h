@@ -37,7 +37,7 @@ typedef NS_ENUM(NSUInteger, LDXImagePickerMediaType) {
 @property (nonatomic, assign) NSUInteger maximumNumberOfSelection;
 @property (nonatomic, copy) NSString *prompt;
 @property (nonatomic, assign) BOOL showsNumberOfSelectedAssets;
-@property (nonatomic, strong) NSMutableOrderedSet *selectedAssets;
+@property (nonatomic, strong) NSMutableArray *selectedAssets;
 @property (nonatomic, strong) NSMutableArray *assetCollectionSubtypes;
 @property (nonatomic, assign) NSUInteger numberOfColumnsInPortrait;
 @property (nonatomic, assign) NSUInteger numberOfColumnsInLandscape;

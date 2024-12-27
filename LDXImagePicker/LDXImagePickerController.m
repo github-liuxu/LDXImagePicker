@@ -48,7 +48,7 @@
         self.numberOfColumnsInPortrait = 4;
         self.numberOfColumnsInLandscape = 7;
         
-        _selectedAssets = [NSMutableOrderedSet orderedSet];
+        _selectedAssets = [NSMutableArray array];
     }
     return self;
 }

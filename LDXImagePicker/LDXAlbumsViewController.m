@@ -73,7 +73,7 @@
 - (IBAction)done:(id)sender {
     if ([self.imagePickerController.delegate respondsToSelector:@selector(ldx_imagePickerController:didFinishPickingAssets:)]) {
         [self.imagePickerController.delegate ldx_imagePickerController:self.imagePickerController
-                                               didFinishPickingAssets:self.imagePickerController.selectedAssets.array];
+                                               didFinishPickingAssets:self.imagePickerController.selectedAssets];
     }
 }
 
