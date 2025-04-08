@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author           = { "questbeat" => "chuyang009@163.com" }
   s.source           = { :git => "https://github.com/github-liuxu/LDXImagePicker.git", :tag => "1.0.0" }
   s.social_media_url = ""
-  s.source_files     = "LDXImagePicker/*.{h,m}"
+  s.source_files     = "LDXImagePicker/*.{h,m,swift}"
   s.exclude_files    = "LDXImagePicker/LDXImagePicker.h"
   s.resources        = 'LDXImagePicker/*.{lproj,storyboard,xcassets}'
   s.platform         = :ios, "9.0"

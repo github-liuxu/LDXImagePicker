@@ -22,8 +22,11 @@
 		58B5DDAA27BA466D00503BA6 /* LDXUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 58B5DDA827BA466D00503BA6 /* LDXUtils.h */; };
 		58B5DDAB27BA466D00503BA6 /* LDXUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B5DDA927BA466D00503BA6 /* LDXUtils.m */; };
 		58CBA81B27A241FB00928555 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3D40FC27A051FC0082805D /* Assets.xcassets */; };
-		58EFC5142873FF1F0019DF1F /* LDXAssetDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 58EFC5122873FF1F0019DF1F /* LDXAssetDownload.m */; };
-		58EFC5152873FF1F0019DF1F /* LDXAssetDownload.h in Headers */ = {isa = PBXBuildFile; fileRef = 58EFC5132873FF1F0019DF1F /* LDXAssetDownload.h */; };
+		58E92C4D2DA53DB60009EAA7 /* LDXAssetDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E92C4C2DA53DB60009EAA7 /* LDXAssetDownload.m */; };
+		58E92C4E2DA53DB60009EAA7 /* LDXAssetDownload.h in Headers */ = {isa = PBXBuildFile; fileRef = 58E92C4B2DA53DB60009EAA7 /* LDXAssetDownload.h */; };
+		58E92C812DA53DF00009EAA7 /* LDXAlbumTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E92C802DA53DF00009EAA7 /* LDXAlbumTool.swift */; };
+		58E92C842DA53F640009EAA7 /* NvBundleUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 58E92C832DA53F640009EAA7 /* NvBundleUtils.m */; };
+		58E92C852DA53F640009EAA7 /* NvBundleUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 58E92C822DA53F640009EAA7 /* NvBundleUtils.h */; };
 		790A850F1AE7D4D9008E2A80 /* LDXSlomoIconView.h in Headers */ = {isa = PBXBuildFile; fileRef = 790A850D1AE7D4D9008E2A80 /* LDXSlomoIconView.h */; };
 		790A85101AE7D4D9008E2A80 /* LDXSlomoIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 790A850E1AE7D4D9008E2A80 /* LDXSlomoIconView.m */; };
 		AA3AD06F1ACF9A3A00BF523E /* LDXVideoIconView.h in Headers */ = {isa = PBXBuildFile; fileRef = AA3AD06D1ACF9A3A00BF523E /* LDXVideoIconView.h */; };
@@ -97,8 +100,11 @@
 		58B5DDA327BA114000503BA6 /* LDXAlbumFetch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LDXAlbumFetch.m; sourceTree = "<group>"; };
 		58B5DDA827BA466D00503BA6 /* LDXUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDXUtils.h; sourceTree = "<group>"; };
 		58B5DDA927BA466D00503BA6 /* LDXUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LDXUtils.m; sourceTree = "<group>"; };
-		58EFC5122873FF1F0019DF1F /* LDXAssetDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LDXAssetDownload.m; path = LDXImagePicker/LDXAssetDownload.m; sourceTree = SOURCE_ROOT; };
-		58EFC5132873FF1F0019DF1F /* LDXAssetDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LDXAssetDownload.h; path = LDXImagePicker/LDXAssetDownload.h; sourceTree = SOURCE_ROOT; };
+		58E92C4B2DA53DB60009EAA7 /* LDXAssetDownload.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LDXAssetDownload.h; sourceTree = "<group>"; };
+		58E92C4C2DA53DB60009EAA7 /* LDXAssetDownload.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LDXAssetDownload.m; sourceTree = "<group>"; };
+		58E92C802DA53DF00009EAA7 /* LDXAlbumTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LDXAlbumTool.swift; sourceTree = "<group>"; };
+		58E92C822DA53F640009EAA7 /* NvBundleUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NvBundleUtils.h; sourceTree = "<group>"; };
+		58E92C832DA53F640009EAA7 /* NvBundleUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NvBundleUtils.m; sourceTree = "<group>"; };
 		74BB93661B2CE91A0044EB60 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LDXImagePicker.strings; sourceTree = "<group>"; };
 		790A850D1AE7D4D9008E2A80 /* LDXSlomoIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDXSlomoIconView.h; sourceTree = "<group>"; };
 		790A850E1AE7D4D9008E2A80 /* LDXSlomoIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDXSlomoIconView.m; sourceTree = "<group>"; };
@@ -181,6 +187,8 @@
 		58B5DDA627BA132000503BA6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				58E92C822DA53F640009EAA7 /* NvBundleUtils.h */,
+				58E92C832DA53F640009EAA7 /* NvBundleUtils.m */,
 				58B5DD9E27BA107C00503BA6 /* LDXImageUtils.h */,
 				58B5DD9F27BA107C00503BA6 /* LDXImageUtils.m */,
 				58B5DDA827BA466D00503BA6 /* LDXUtils.h */,
@@ -198,11 +206,11 @@
 			name = Fetch;
 			sourceTree = "<group>";
 		};
-		58EFC5112873FF0D0019DF1F /* AssetDownload */ = {
+		58E92C4A2DA53D9C0009EAA7 /* AssetDownload */ = {
 			isa = PBXGroup;
 			children = (
-				58EFC5132873FF1F0019DF1F /* LDXAssetDownload.h */,
-				58EFC5122873FF1F0019DF1F /* LDXAssetDownload.m */,
+				58E92C4B2DA53DB60009EAA7 /* LDXAssetDownload.h */,
+				58E92C4C2DA53DB60009EAA7 /* LDXAssetDownload.m */,
 			);
 			path = AssetDownload;
 			sourceTree = "<group>";
@@ -268,7 +276,8 @@
 			isa = PBXGroup;
 			children = (
 				AAA8FE081ACDA079002A9710 /* LDXImagePicker.h */,
-				58EFC5112873FF0D0019DF1F /* AssetDownload */,
+				58E92C802DA53DF00009EAA7 /* LDXAlbumTool.swift */,
+				58E92C4A2DA53D9C0009EAA7 /* AssetDownload */,
 				58B5DDA727BA133100503BA6 /* Fetch */,
 				58B5DDA627BA132000503BA6 /* Utils */,
 				58B5DD9927B9FFDB00503BA6 /* Services */,
@@ -344,10 +353,11 @@
 				AAF1CA331ACE6FB5005F6295 /* LDXAssetCell.h in Headers */,
 				0C8F6B4E279EF45C005F18FC /* LDXAlbumCircleView.h in Headers */,
 				58B5DDA027BA107C00503BA6 /* LDXImageUtils.h in Headers */,
+				58E92C852DA53F640009EAA7 /* NvBundleUtils.h in Headers */,
 				58B5DDAA27BA466D00503BA6 /* LDXUtils.h in Headers */,
 				AAF1CA2F1ACE6E46005F6295 /* LDXAssetsViewController.h in Headers */,
 				58B5DDA427BA114000503BA6 /* LDXAlbumFetch.h in Headers */,
-				58EFC5152873FF1F0019DF1F /* LDXAssetDownload.h in Headers */,
+				58E92C4E2DA53DB60009EAA7 /* LDXAssetDownload.h in Headers */,
 				AAF1CA1A1ACE5467005F6295 /* LDXAlbumCell.h in Headers */,
 				AAA8FE5B1ACDA554002A9710 /* LDXAlbumsViewController.h in Headers */,
 				AA3AD06F1ACF9A3A00BF523E /* LDXVideoIconView.h in Headers */,
@@ -410,6 +420,7 @@
 					AAA8FE021ACDA079002A9710 = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = GURX554A9Q;
+						LastSwiftMigration = 1630;
 					};
 					AAA8FE261ACDA0CE002A9710 = {
 						CreatedOnToolsVersion = 6.2;
@@ -479,11 +490,13 @@
 				AAF1CA301ACE6E46005F6295 /* LDXAssetsViewController.m in Sources */,
 				0C8F6B53279F01DD005F18FC /* LDXAlbumToast.m in Sources */,
 				AAF1CA1B1ACE5467005F6295 /* LDXAlbumCell.m in Sources */,
-				58EFC5142873FF1F0019DF1F /* LDXAssetDownload.m in Sources */,
+				58E92C4D2DA53DB60009EAA7 /* LDXAssetDownload.m in Sources */,
 				AAA8FE221ACDA090002A9710 /* LDXImagePickerController.m in Sources */,
 				0C8F6B4A279EEEC9005F18FC /* LDXAlbumProgressViewController.m in Sources */,
 				AA3AD0741ACFA06700BF523E /* LDXVideoIndicatorView.m in Sources */,
+				58E92C812DA53DF00009EAA7 /* LDXAlbumTool.swift in Sources */,
 				0C8F6B4F279EF45C005F18FC /* LDXAlbumCircleView.m in Sources */,
+				58E92C842DA53F640009EAA7 /* NvBundleUtils.m in Sources */,
 				58B5DDAB27BA466D00503BA6 /* LDXUtils.m in Sources */,
 				0C47F61627DBC01C00586D6C /* LDXAlbumService.m in Sources */,
 				AAA8FE5C1ACDA554002A9710 /* LDXAlbumsViewController.m in Sources */,
@@ -661,6 +674,7 @@
 		AAA8FE1A1ACDA079002A9710 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = GURX554A9Q;
@@ -679,12 +693,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.LDXImagePicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
 		AAA8FE1B1ACDA079002A9710 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = GURX554A9Q;
@@ -703,6 +720,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.LDXImagePicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Release;
 		};
