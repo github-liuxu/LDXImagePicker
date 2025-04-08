@@ -20,4 +20,9 @@ FOUNDATION_EXPORT const unsigned char LDXImagePickerVersionString[];
 #else
 #import <LDXImagePicker/LDXImagePickerController.h>
 #endif
+#if __has_include("LDXAlbumTool.h")
+#import "LDXAlbumTool.h"
+#else
+#import <LDXImagePicker/LDXAlbumTool.h>
+#endif
 
