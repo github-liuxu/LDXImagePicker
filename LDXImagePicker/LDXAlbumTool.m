@@ -52,7 +52,7 @@ static NSMutableArray *_albumObjects;
 
 #pragma mark - LDXImagePickerControllerDelegate
 - (void)ldx_imagePickerControllerDidCancel:(LDXImagePickerController *)imagePickerController {
-    [imagePickerController dismissViewControllerAnimated:YES completion:nil];
+    [imagePickerController.presentingViewController dismissViewControllerAnimated:YES completion:nil];
     if (self.cancelBlock) self.cancelBlock();
     
     [[LDXAlbumTool albumObjects] removeObject:self];
@@ -60,14 +60,11 @@ static NSMutableArray *_albumObjects;
 
 - (void)ldx_imagePickerController:(LDXImagePickerController *)imagePickerController
              didFinishPickingAssets:(NSArray *)assets {
-    [imagePickerController dismissViewControllerAnimated:YES completion:nil];
-    
+    [imagePickerController.presentingViewController dismissViewControllerAnimated:YES completion:nil];
     NSMutableArray<PHAsset *> *resultAssets = [NSMutableArray array];
-    if ([assets isKindOfClass:[NSArray class]]) {
-        for (id item in assets) {
-            if ([item isKindOfClass:[PHAsset class]]) {
-                [resultAssets addObject:item];
-            }
+    for (id item in assets) {
+        if ([item isKindOfClass:[PHAsset class]]) {
+            [resultAssets addObject:item];
         }
     }
     
