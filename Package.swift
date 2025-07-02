@@ -13,7 +13,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "LDXImagePicker",
-            type: .dynamic,
+            type: .static,
             targets: ["LDXImagePicker"])
     ],
     targets: [
@@ -24,11 +24,7 @@ let package = Package(
             resources: [
                 .process("Assets.xcassets"),
                 .copy("en.lproj"),
-                .copy("zh-Hans.lproj"),
-                .copy("pl.lproj"),
-                .copy("de.lproj"),
-                .copy("es.lproj"),
-                .copy("ja.lproj")
+                .copy("zh-Hans.lproj")
             ],
             publicHeadersPath: "."
         )

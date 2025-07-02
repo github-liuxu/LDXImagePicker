@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/github-liuxu/LDXImagePicker"
   s.license          = "MIT"
   s.author           = { "questbeat" => "chuyang009@163.com" }
-  s.source           = { :git => "https://github.com/github-liuxu/LDXImagePicker.git", :tag => "1.0.0" }
+  s.source           = { :git => "https://github.com/github-liuxu/LDXImagePicker.git", :tag => "1.1.0" }
   s.social_media_url = ""
   s.source_files     = "LDXImagePicker/*.{h,m,swift}"
   s.exclude_files    = "LDXImagePicker/LDXImagePicker.h"

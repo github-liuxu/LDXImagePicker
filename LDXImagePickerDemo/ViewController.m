@@ -7,10 +7,9 @@
 //
 
 #import "ViewController.h"
-#import <LDXImagePicker/LDXImagePicker.h>
-//#import <LDXImagePicker/LDXAlbumToast.h>
+#import <LDXImagePicker/PhotoPickerController.h>
 
-@interface ViewController () <LDXImagePickerControllerDelegate>
+@interface ViewController ()
 
 @end
 
@@ -19,64 +18,30 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    [LDXAlbumTool show];
 }
 
-
-#pragma mark - UITableViewDelegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    LDXImagePickerController *imagePickerController = [LDXImagePickerController new];
-    imagePickerController.delegate = self;
-    imagePickerController.mediaType = LDXImagePickerMediaTypeAny;
-    imagePickerController.allowsMultipleSelection = (indexPath.section == 1);
-    imagePickerController.showsNumberOfSelectedAssets = YES;
+- (IBAction)openImagePicker:(id)sender {
+    PhotoPickerController *picker = [[PhotoPickerController alloc] init];
+    picker.selectionMode = SelectionModeMultiple;
+    picker.maxSelectionCount = 999;
     
-    if (indexPath.section == 1) {
-        switch (indexPath.row) {
-            case 1:
-                imagePickerController.minimumNumberOfSelection = 3;
-                break;
-                
-            case 2:
-                imagePickerController.maximumNumberOfSelection = 6;
-                break;
-                
-            case 3:
-                imagePickerController.minimumNumberOfSelection = 3;
-                imagePickerController.maximumNumberOfSelection = 6;
-                break;
-
-            case 4:
-                imagePickerController.maximumNumberOfSelection = 2;
-                [imagePickerController.selectedAssets addObject:[PHAsset fetchAssetsWithOptions:nil].lastObject];
-                break;
-                
-            default:
-                break;
-        }
-    }
-    imagePickerController.modalPresentationStyle = UIModalPresentationFullScreen;
-    [self presentViewController:imagePickerController animated:YES completion:NULL];
-}
-
-
-#pragma mark - LDXImagePickerControllerDelegate
-
-- (void)ldx_imagePickerController:(LDXImagePickerController *)imagePickerController didFinishPickingAssets:(NSArray *)assets
-{
-    NSLog(@"Selected assets:");
-    NSLog(@"%@", assets);
+    PhotoPickerCompletionHandler *handler = [[PhotoPickerCompletionHandler alloc] init];
+    __weak typeof(self)weakSelf = self;
+    handler.didFinishPicking = ^(NSArray<PHAsset *> *assets) {
+        // 处理选中的照片
+        NSLog(@"选中的照片数量: %lu", (unsigned long)assets.count);
+        [assets enumerateObjectsUsingBlock:^(PHAsset * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            NSLog(@"asset: %@", obj.localIdentifier);
+        }];
+    };
+    handler.didCancel = ^{
+        NSLog(@"用户取消了选择");
+    };
     
-    [self dismissViewControllerAnimated:YES completion:NULL];
-}
-
-- (void)ldx_imagePickerControllerDidCancel:(LDXImagePickerController *)imagePickerController
-{
-    NSLog(@"Canceled.");
+    picker.completionHandler = handler;
     
-    [self dismissViewControllerAnimated:YES completion:NULL];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:picker];
+    [self presentViewController:navController animated:YES completion:nil];
 }
 
 @end
