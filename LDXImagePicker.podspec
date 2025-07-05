@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "LDXImagePicker"
-  s.version          = "master"
+  s.version          = "1.1.1"
   s.summary          = "A clone of UIImagePickerController with multiple selection support."
   s.homepage         = "https://github.com/github-liuxu/LDXImagePicker"
   s.license          = "MIT"
