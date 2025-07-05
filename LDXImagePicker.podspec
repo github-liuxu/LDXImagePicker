@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary          = "A clone of UIImagePickerController with multiple selection support."
   s.homepage         = "https://github.com/github-liuxu/LDXImagePicker"
   s.license          = "MIT"
-  s.author           = { "questbeat" => "chuyang009@163.com" }
+  s.author           = { "github-liuxu" => "chuyang009@163.com" }
   s.source           = { :git => "https://github.com/github-liuxu/LDXImagePicker.git", :tag => "1.1.1" }
   s.social_media_url = ""
   s.source_files     = "LDXImagePicker/*.{h,m,swift}"
